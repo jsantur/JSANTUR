@@ -1,4 +1,4 @@
-# ![https://mouredev.com](https://raw.githubusercontent.com/jsantur/JSANTUR/assets/Images/jsantur_emote.png) Hola, mi nombre es Joseph Santur 👋
+# ![https://github.com/jsantur/JSANTUR](./assets/Images/jsantur_emote.png) Hola, mi nombre es Joseph Santur 👋
 ### Freelance fullstack iOS & Android engineer
 
 ![https://github.com/mouredev](./mouredev_github_profile.png)
