@@ -1,7 +1,7 @@
 # ![https://github.com/jsantur/JSANTUR](./assets/Images/jsantur_emote.png) Hola, mi nombre es Joseph Santur 👋
 ### Freelance fullstack iOS & Android engineer
 
-![https://github.com/mouredev](./mouredev_github_profile.png)
+![https://github.com/jsantur/JSANTUR](./assets/Images/jsantur_github_profile.png)
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCxPD7bsocoAMq8Dj18kmGyQ?style=social)](https://youtube.com/mouredevapps?sub_confirmation=1)
 [![Twitch Status](https://img.shields.io/twitch/status/mouredev?style=social)](https://twitch.com/mouredev)
