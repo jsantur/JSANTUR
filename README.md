@@ -122,11 +122,9 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
 
 ## 📫 Contacto y apoyo:
 
-Si deseas hablar sobre proyectos, colaboraciones o simplemente intercambiar ideas, no dudes en contactarme a través de mis redes o por correo electrónico.
-
+¿Proyecto en mente o ganas de colaborar? Contáctame por redes o correo y lo desarrollamos juntos.
  
 [![Email Personal](https://img.shields.io/badge/josephsantur@jsantur.com-EMAIL%20PERSONAL%20(RESPUESTA%20LENTA)-d34a35?style=for-the-badge&logo=gmail&logoColor=white)](mailto:josephsanturm@gmail.com)
-
 [![MyPublicInbox](https://img.shields.io/badge/MyPublicInbox-MENSAJE+CAFÉ_(RESPUESTA_RÁPIDA)_Gracias!-orange?style=for-the-badge&logo=Microsoft+Outlook&logoColor=white&labelColor=101010)](https://mypublicinbox.com/mouredev)
 </br>
 [![BuyMeACoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-apoya_mi_trabajo-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white&labelColor=101010)](https://www.buymeacoffee.com/mouredev)
