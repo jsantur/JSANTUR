@@ -120,10 +120,23 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
 </table>
 
 
-## Contacto y apoyo:
+## 📫 Contacto y apoyo:
+
+Si deseas hablar sobre proyectos, colaboraciones o simplemente intercambiar ideas, no dudes en contactarme a través de mis redes o por correo electrónico.
+
+<div align="center">
+	<a href="mailto:hola@chemaalfonso.com">Enviar un correo</a>
+</div>
+
+---
+
 
 [![MyPublicInbox](https://img.shields.io/badge/MyPublicInbox-MENSAJE+CAFÉ_(RESPUESTA_RÁPIDA)_Gracias!-orange?style=for-the-badge&logo=Microsoft+Outlook&logoColor=white&labelColor=101010)](https://mypublicinbox.com/mouredev)
 </br>
 [![Email](https://img.shields.io/badge/braismoure@mouredev.com-email_personal_(respuesta_lenta)-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010)](mailto:braismoure@mouredev.com)
 </br>
 [![BuyMeACoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-apoya_mi_trabajo-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white&labelColor=101010)](https://www.buymeacoffee.com/mouredev)
+
+<div align="center">
+	<i>“Cuanto más grande es la prueba, más glorioso es el triunfo.” - Thomas Paine</i>
+</div>
