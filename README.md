@@ -133,4 +133,4 @@ Si deseas hablar sobre proyectos, colaboraciones o simplemente intercambiar idea
 <div align="center">
 	<i>“Cuanto más grande es la prueba, más glorioso es el triunfo.” - Thomas Paine</i>
 </div>
-https://img.shields.io/badge/Proyecto-En_Desarrollo-orange
+ 
