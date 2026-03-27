@@ -18,7 +18,7 @@ He colaborado en diversos proyectos tecnológicos, aportando soluciones innovado
 
 Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnologías, con el objetivo de seguir creando soluciones que generen impacto y aporten valor real.
 
-# Algunos proyectos de la comunidad
+# 📦 Algunos proyectos de la comunidad
 
 ## Python desde cero: Curso gratis
 
@@ -63,7 +63,7 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
 
 [![Curso Git](https://img.shields.io/github/stars/mouredev/hello-sql?label=Curso%20SQL&style=social)](https://github.com/mouredev/hello-sql)
 
-## Algunos vídeos en YouTube:
+## ▶️ Algunos vídeos en YouTube:
 
 <table style="width:100%">
 <tr>
