@@ -27,11 +27,13 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
 
 [![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec)
  
-## JavaScript desde cero: Curso gratis
+## SKILL Ingenieros | Formación continua
 
-<a href="https://mouredev.link/javascript"><img src="https://raw.githubusercontent.com/mouredev/hello-javascript/main/Images/header.jpg" style="height: 60%; width:60%;"/></a>
+<a href="https://script.google.com/macros/s/AKfycbyfwpjeOvVmYIS-bs3yR58dOtqlQ9yQP0cK8ZJI6fIwwzOSO1qQTsAGlOYm3pmG09vgAA/exec">
+  <img src="./assets/Images/jsantur_skill.jpg" style="height: 60%; width: 60%;"/>
+</a>
 
-[![Curso JavaScript](https://img.shields.io/github/stars/mouredev/hello-javascript?label=Curso%20JavaScript%20desde%20cero&style=social)](https://github.com/mouredev/hello-javascript)
+[![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbyfwpjeOvVmYIS-bs3yR58dOtqlQ9yQP0cK8ZJI6fIwwzOSO1qQTsAGlOYm3pmG09vgAA/exec)
 
 ## Git & GitHub desde cero: Curso gratis
 
