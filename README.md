@@ -27,7 +27,7 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
 
 [![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec)
  
-## SKILL Ingenieros | Formación continua
+## SKILL | ¡Certifica tus habilidades!
 
 <a href="https://script.google.com/macros/s/AKfycbyfwpjeOvVmYIS-bs3yR58dOtqlQ9yQP0cK8ZJI6fIwwzOSO1qQTsAGlOYm3pmG09vgAA/exec">
   <img src="./assets/Images/jsantur_skill.jpg" style="height: 60%; width: 60%;"/>
