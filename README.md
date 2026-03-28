@@ -1,10 +1,7 @@
 # ![https://github.com/jsantur/JSANTUR](./assets/Images/jsantur_emote.png) Hola, mi nombre es Joseph Santur 👋
-
-https://github.com/jsantur/JSANTUR/blob/main/assets/Images/hero-portrait.png
-
 ### Freelance fullstack iOS & Android engineer
 
-![https://github.com/jsantur/JSANTUR](./assets/images/jsantur_github_profile.png)
+![https://github.com/jsantur/JSANTUR](./assets/Images/jsantur_github_profile.png)
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCxPD7bsocoAMq8Dj18kmGyQ?style=social)](https://github.com/jsantur)
 [![Twitch Status](https://img.shields.io/twitch/status/mouredev?style=social)](https://github.com/jsantur)
@@ -25,7 +22,7 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
 
 ## CADEP Ingenieros | Formación continua
 <a href="https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec">
-  <img src="./assets/images/jsantur_campusCebys.png" style="height: 60%; width: 60%;"/>
+  <img src="./assets/Images/jsantur_campusCebys.png" style="height: 60%; width: 60%;"/>
 </a>
 
 [![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec)
