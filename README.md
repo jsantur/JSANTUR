@@ -18,7 +18,7 @@ He colaborado en diversos proyectos tecnológicos, aportando soluciones innovado
 
 Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnologías, con el objetivo de seguir creando soluciones que generen impacto y aporten valor real.
 
-# 📦 Algunos proyectos de la comunidad
+# 💼 Algunos proyectos destacados
 
 ## Python desde cero: Curso gratis
 
