@@ -25,7 +25,7 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
   <img src="./assets/Images/jsantur_campusCebys.png" style="height: 60%; width: 60%;"/>
 </a>
 
-[![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)]([https://github.com/jsantur/JSANTUR](https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec))
+[![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec)
  
 
 ## JavaScript desde cero: Curso gratis
