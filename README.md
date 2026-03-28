@@ -24,8 +24,8 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
 <a href="https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec">
   <img src="./assets/Images/jsantur_campusCebys.png" style="height: 60%; width: 60%;"/>
 </a>
-
-[![Curso Python](https://img.shields.io/github/stars/mouredev/hello-python?label=Curso%20Python%20desde%20cero&style=social)](https://github.com/mouredev/hello-python)
+[![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec)
+ 
 
 ## JavaScript desde cero: Curso gratis
 
