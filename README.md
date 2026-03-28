@@ -1,4 +1,7 @@
-# ![https://github.com/jsantur/JSANTUR](./assets/images/jsantur_emote.png) Hola, mi nombre es Joseph Santur 👋
+# ![https://github.com/jsantur/JSANTUR](./assets/Images/jsantur_emote.png) Hola, mi nombre es Joseph Santur 👋
+
+https://github.com/jsantur/JSANTUR/blob/main/assets/Images/hero-portrait.png
+
 ### Freelance fullstack iOS & Android engineer
 
 ![https://github.com/jsantur/JSANTUR](./assets/images/jsantur_github_profile.png)
