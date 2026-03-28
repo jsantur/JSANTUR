@@ -21,8 +21,9 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
 # 💼 Algunos proyectos destacados
 
 ## Python desde cero: Curso gratis
-<img src="./assets/Images/jsantur_campusCebys.png" style="height: 60%; width: 60%;"/>
-<a href="https://mouredev.link/python"><img src="![https://github.com/jsantur/JSANTUR](./assets/Images/jsantur_campusCebys.png)" style="height: 60%; width:60%;"/></a>
+<a href="https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec">
+  <img src="./assets/Images/jsantur_campusCebys.png" style="height: 60%; width: 60%;"/>
+</a>
 
 [![Curso Python](https://img.shields.io/github/stars/mouredev/hello-python?label=Curso%20Python%20desde%20cero&style=social)](https://github.com/mouredev/hello-python)
 
