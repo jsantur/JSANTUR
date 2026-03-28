@@ -27,6 +27,7 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
 
 [![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbwnTn9JWznQjIrk-4HH9l3Y8msZ-JPm_83FnkyvODTfsvPwZecpgZ1OyTdpas9BS6hU/exec)
  
+![Duolingo](https://img.shields.io/badge/Duolingo-Nivel%20x4-4CAF50?style=for-the-badge&logo=duolingo&logoColor=white)
 
 ## JavaScript desde cero: Curso gratis
 
