@@ -29,11 +29,11 @@ Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnolo
  
 ## SKILL | ¡Certifica tus habilidades!
 
-<a href="https://script.google.com/macros/s/AKfycbyfwpjeOvVmYIS-bs3yR58dOtqlQ9yQP0cK8ZJI6fIwwzOSO1qQTsAGlOYm3pmG09vgAA/exec">
+<a href="https://script.google.com/macros/s/AKfycbzlfRLDxcQeBQ7vybhQxcbqFJHtMRe3KvHrrwKI70XxkPd8DbIrFq5IqLJQwzYL08Wgzw/exec">
   <img src="./assets/Images/jsantur_skill.jpg" style="height: 60%; width: 60%;"/>
 </a>
 
-[![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbyfwpjeOvVmYIS-bs3yR58dOtqlQ9yQP0cK8ZJI6fIwwzOSO1qQTsAGlOYm3pmG09vgAA/exec)
+[![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbzlfRLDxcQeBQ7vybhQxcbqFJHtMRe3KvHrrwKI70XxkPd8DbIrFq5IqLJQwzYL08Wgzw/exec)
 
 ## Git & GitHub desde cero: Curso gratis
 
