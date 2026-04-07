@@ -16,6 +16,7 @@ creando soluciones completas y eficientes. A lo largo de mi trayectoria, he trab
 >[!TIP]
 Me especializo en arquitectura, consultoría y desarrollo de software, con un enfoque particular en el uso de Python para la creación de aplicaciones robustas tanto en entornos web como de escritorio. Además, integro conocimientos de diseño gráfico y corporativo para desarrollar interfaces modernas, atractivas y centradas en la experiencia del usuario.
 
+>[!IMPORTANT]
 He colaborado en diversos proyectos tecnológicos, aportando soluciones innovadoras y adaptadas a las necesidades de cada cliente. Mi enfoque combina la calidad técnica con una visión estratégica, lo que me permite construir productos funcionales, escalables y alineados con los objetivos del negocio.
 
 Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnologías, con el objetivo de seguir creando soluciones que generen impacto y aporten valor real.
