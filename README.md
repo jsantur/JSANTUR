@@ -10,17 +10,16 @@
 ![GitHub Followers](https://img.shields.io/github/followers/mouredev?style=social)
 ![GitHub Followers](https://img.shields.io/github/stars/mouredev?style=social)
 >[!NOTE]
-Soy desarrollador de software con más de 8 años de experiencia
-creando soluciones completas y eficientes. A lo largo de mi trayectoria, he trabajado en el desarrollo de aplicaciones web, móviles y software de escritorio empresarial, participando en proyectos que abarcan desde la conceptualización hasta la implementación final.
+Soy desarrollador de software con más de 8 años de experiencia diseñando y construyendo soluciones completas, eficientes y orientadas a resultados. He participado en el desarrollo de aplicaciones web, móviles y sistemas de escritorio empresarial, abarcando todo el ciclo de vida del software: desde la conceptualización hasta la implementación y puesta en producción.
 
 >[!TIP]
-Me especializo en arquitectura, consultoría y desarrollo de software, con un enfoque particular en el uso de Python para la creación de aplicaciones robustas tanto en entornos web como de escritorio. Además, integro conocimientos de diseño gráfico y corporativo para desarrollar interfaces modernas, atractivas y centradas en la experiencia del usuario.
+Mi enfoque principal está en la arquitectura, consultoría y desarrollo de software, con especial énfasis en Python para la creación de aplicaciones robustas y escalables. Además, integro criterios de diseño gráfico y branding para desarrollar interfaces modernas, intuitivas y centradas en la experiencia del usuario.
 
 >[!IMPORTANT]
-He colaborado en diversos proyectos tecnológicos, aportando soluciones innovadoras y adaptadas a las necesidades de cada cliente. Mi enfoque combina la calidad técnica con una visión estratégica, lo que me permite construir productos funcionales, escalables y alineados con los objetivos del negocio.
+He contribuido en diversos proyectos tecnológicos, desarrollando soluciones innovadoras alineadas a las necesidades del cliente. Combino solidez técnica con visión estratégica, lo que me permite construir productos funcionales, escalables y orientados a generar valor real para el negocio.
 
 >[!WARNING]
-Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnologías, con el objetivo de seguir creando soluciones que generen impacto y aporten valor real.
+Me encuentro en constante aprendizaje y evolución profesional, explorando nuevas tecnologías y tendencias para mantenerme actualizado. Mi objetivo es seguir desarrollando soluciones que no solo resuelvan problemas, sino que también generen impacto significativo.
 
 # 💼 Algunos proyectos destacados
 
