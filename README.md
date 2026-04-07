@@ -12,6 +12,7 @@
 >[!NOTE]
 Soy desarrollador de software con más de 8 años de experiencia
 creando soluciones completas y eficientes. A lo largo de mi trayectoria, he trabajado en el desarrollo de aplicaciones web, móviles y software de escritorio empresarial, participando en proyectos que abarcan desde la conceptualización hasta la implementación final.
+
 >[!TIP]
 Me especializo en arquitectura, consultoría y desarrollo de software, con un enfoque particular en el uso de Python para la creación de aplicaciones robustas tanto en entornos web como de escritorio. Además, integro conocimientos de diseño gráfico y corporativo para desarrollar interfaces modernas, atractivas y centradas en la experiencia del usuario.
 
