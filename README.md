@@ -19,6 +19,7 @@ Me especializo en arquitectura, consultoría y desarrollo de software, con un en
 >[!IMPORTANT]
 He colaborado en diversos proyectos tecnológicos, aportando soluciones innovadoras y adaptadas a las necesidades de cada cliente. Mi enfoque combina la calidad técnica con una visión estratégica, lo que me permite construir productos funcionales, escalables y alineados con los objetivos del negocio.
 
+>[!WARNING]
 Actualmente, continúo fortaleciendo mis habilidades y explorando nuevas tecnologías, con el objetivo de seguir creando soluciones que generen impacto y aporten valor real.
 
 # 💼 Algunos proyectos destacados
