@@ -1,1147 +1,1268 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Santur - Full Stack Developer</title>
-    <meta name="description" content="Desarrollador Full Stack especializado en aplicaciones web, móviles y de escritorio con experiencia en tecnologías modernas.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calibre:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Animation Libraries -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Custom Styles (moved to styles.css) -->
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <style>
-        /* Logo estático por defecto; interacción solo en hover/focus (sutil) */
-        .brand-logo { display:inline-flex; align-items:center; gap:.5rem; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSantur | Frontend Developer</title>
+  <meta name="title" content="JSantur | Frontend Developer">
+  <meta name="description" content="Hola, mi nombre es Joseph Santur. Soy ingeniero de software, desarrollador freelance full-stack y divulgador.">
+  <link rel="icon" type="image/x-icon" href="./assets/Images/imagen2.ico">
+  <meta name="theme-color" content="#64ffda">
 
-        /* Forzar logo.png estático: eliminar cualquier animación/transform aplicada desde otros estilos/JS */
-        img[src$="logo.png"],
-        .brand-logo__img {
-            transform: none !important;
-            filter: none !important;
-            opacity: 1 !important;
-            animation: none !important;
-            will-change: auto !important;
-            transition: transform .18s ease, opacity .18s ease !important;
-        }
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://web-jsantur.vercel.app/">
+  <meta property="og:title" content="JSantur | Te enseño programación y desarrollo de software">
+  <meta property="og:description" content="Hola, mi nombre es Joseph Santur. Soy ingeniero de software, desarrollador freelance full-stack y divulgador.">
+  <meta property="og:image" content="https://web-jsantur.vercel.app/images/preview-v2.jpg">
 
-        /* Hover sutil únicamente sobre logo.png */
-        .brand-logo:hover img[src$="logo.png"],
-        .brand-logo:focus img[src$="logo.png"],
-        .brand-logo:focus-visible img[src$="logo.png"] {
-            transform: translateY(-2px) scale(1.02) !important;
-            filter: none !important;
-            opacity: 1 !important;
-            transition: transform .18s ease !important;
-        }
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://web-jsantur.vercel.app/">
+  <meta property="twitter:title" content="JSantur | Te enseño programación y desarrollo de software">
+  <meta property="twitter:description" content="Hola, mi nombre es Joseph Santur. Soy ingeniero de software, desarrollador freelance full-stack y divulgador.">
+  <meta property="twitter:image" content="https://web-jsantur.vercel.app/images/preview-v2.jpg">
+  <meta name="twitter:site" content="@jsantur">
 
-        /* Asegurar que no haya transiciones residuales en la clase .no-hover (por si existe) */
-        .brand-logo__img.no-hover {
-            transform: none !important;
-            transition: none !important;
-            animation: none !important;
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-        /* Accesibilidad: foco visible */
-        .brand-logo:focus { outline: none; }
-        .brand-logo:focus-visible {
-            outline: 2px solid rgba(59,130,246,.15);
-            border-radius: 6px;
-        }
-    </style>
+  <style>
+    /* ===================== CSS VARIABLES ===================== */
+    :root {
+      --navy:        #0a192f;
+      --navy-light:  #112240;
+      --navy-lighter:#1d3461;
+      --slate:       #8892b0;
+      --slate-light: #a8b2d8;
+      --slate-lighter:#ccd6f6;
+      --white:       #e6f1ff;
+      --green:       #64ffda;
+      --green-tint:  rgba(100,255,218,.1);
+      --font-sans:   'Raleway', sans-serif;
+      --font-mono:   'Fira Code', monospace;
+      --transition:  all .25s cubic-bezier(.645,.045,.355,1);
+      --border-radius:4px;
+      --nav-height:  70px;
+    }
+    [data-theme="light"] {
+      --navy:        #f8f9fa;
+      --navy-light:  #edf2f7;
+      --navy-lighter:#dde6f7;
+      --slate:       #455275;
+      --slate-light: #2d3d66;
+      --slate-lighter:#1a2b4a;
+      --white:       #0d1b36;
+      --green:       #0a6c5e;
+      --green-tint:  rgba(10,108,94,.1);
+    }
+
+    /* ===================== RESET ===================== */
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      background:var(--navy);
+      color:var(--slate);
+      font-family:var(--font-sans);
+      font-size:18px;
+      line-height:1.7;
+      transition: background .35s, color .35s;
+      overflow-x:hidden;
+    }
+    a { color:inherit; text-decoration:none; }
+    ul { list-style:none; }
+    img { max-width:100%; display:block; }
+
+    /* ===================== LOADER ===================== */
+    #loader {
+      position:fixed; inset:0; z-index:9999;
+      background:var(--navy);
+      display:flex; align-items:center; justify-content:center;
+      flex-direction:column;
+      gap:24px;
+      transition: opacity .6s ease, visibility .6s ease;
+    }
+    #loader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
+
+    .loader-logo {
+      font-family:var(--font-mono);
+      font-size:clamp(28px, 6vw, 60px);
+      color:var(--green);
+      position:relative;
+      display:inline-block;
+      letter-spacing:.08em;
+      animation: logoPulse 1.4s ease-in-out infinite alternate;
+    }
+    .loader-logo::before {
+      content:'<';
+      color:var(--slate);
+      margin-right:6px;
+    }
+    .loader-logo::after {
+      content:'/>';
+      color:var(--slate);
+      margin-left:6px;
+    }
+    @keyframes logoPulse {
+      from { opacity:.6; transform: scale(.97); }
+      to   { opacity:1;  transform: scale(1); }
+    }
+
+    .loader-bar-wrap {
+      width: min(260px, 60vw);
+      height:2px;
+      background: rgba(100,255,218,.15);
+      border-radius:99px;
+      overflow:hidden;
+    }
+    .loader-bar {
+      height:100%;
+      background:var(--green);
+      border-radius:99px;
+      width:0%;
+      animation: barFill 1.8s cubic-bezier(.4,0,.2,1) forwards;
+    }
+    @keyframes barFill {
+      0%   { width:0% }
+      40%  { width:55% }
+      70%  { width:75% }
+      100% { width:100% }
+    }
+    .loader-text {
+      font-family:var(--font-mono);
+      font-size:13px;
+      color:var(--slate);
+      letter-spacing:.12em;
+      animation: dotCycle 1.2s steps(4, end) infinite;
+    }
+    @keyframes dotCycle {
+      0%  { content:'Cargando'; }
+    }
+    .loader-text::after {
+      content:'';
+      animation: dots 1.2s steps(4, end) infinite;
+    }
+    @keyframes dots {
+      0%  { content:''; }
+      25% { content:'.'; }
+      50% { content:'..'; }
+      75% { content:'...'; }
+      100%{ content:''; }
+    }
+
+    /* ===================== SCROLLBAR ===================== */
+    ::-webkit-scrollbar { width:8px; }
+    ::-webkit-scrollbar-track { background:var(--navy-light); }
+    ::-webkit-scrollbar-thumb { background:var(--navy-lighter); border-radius:4px; }
+
+    /* ===================== SELECTION ===================== */
+    ::selection { background:var(--green-tint); color:var(--green); }
+
+    /* ===================== SCROLL PROGRESS ===================== */
+    .scroll-progress-bar {
+      position:fixed; top:0; left:0; height:2px;
+      background:var(--green); z-index:9000;
+      width:0%; transition:width .1s;
+      box-shadow: 0 0 8px var(--green);
+    }
+
+    /* ===================== CURSOR ===================== */
+    .cursor-dot, .cursor-ring {
+      position:fixed; pointer-events:none; z-index:9998;
+      border-radius:50%; mix-blend-mode:difference;
+    }
+    .cursor-dot {
+      width:6px; height:6px;
+      background:var(--green);
+      transform:translate(-50%,-50%);
+      transition:transform .05s;
+    }
+    .cursor-ring {
+      width:36px; height:36px;
+      border:1.5px solid var(--green);
+      opacity:.5;
+      transform:translate(-50%,-50%);
+      transition: transform .18s ease, width .2s ease, height .2s ease, opacity .2s ease;
+    }
+    .cursor-ring.hovered { width:52px; height:52px; opacity:.25; }
+
+    /* ===================== SIDE LINES ===================== */
+    .side-left, .side-right {
+      position:fixed; bottom:0; z-index:100;
+      display:flex; flex-direction:column; align-items:center; gap:20px;
+    }
+    .side-left  { left:28px; }
+    .side-right { right:28px; }
+    .side-left::after, .side-right::after {
+      content:''; width:1px; height:90px;
+      background:var(--slate);
+    }
+    .side-left a, .side-right a {
+      color:var(--slate); font-family:var(--font-mono);
+      font-size:11px; letter-spacing:.15em;
+      transition:var(--transition);
+      writing-mode:vertical-rl;
+    }
+    .side-left a:hover, .side-right a:hover { color:var(--green); transform:translateY(-3px); }
+    .side-left svg { width:20px; height:20px; transition:var(--transition); }
+    .side-left a.icon-link { color:var(--slate); }
+    .side-left a.icon-link:hover { color:var(--green); transform:translateY(-3px); }
+
+    @media(max-width:768px) { .side-left, .side-right { display:none; } }
+
+    /* ===================== NAVBAR ===================== */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:1000;
+      height:var(--nav-height);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 50px;
+      background:rgba(10,25,47,.85);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      box-shadow:0 2px 20px rgba(0,0,0,.2);
+      transition:var(--transition);
+    }
+    [data-theme="light"] nav {
+      background: rgba(248,249,250,.88);
+    }
+    @media(max-width:768px) { nav { padding:0 20px; } }
+
+    .nav-logo {
+      display:flex;
+      align-items:center;
+      transition:var(--transition);
+    }
+    .nav-logo img {
+      height:40px;
+      width:auto;
+      display:block;
+    }
+    .nav-logo:hover { opacity:0.8; }
+
+    .nav-links {
+      display:flex; align-items:center; gap:8px;
+    }
+    .nav-links a {
+      font-family:var(--font-mono); font-size:13px;
+      color:var(--slate-lighter); padding:10px 14px;
+      transition:var(--transition);
+      counter-increment:nav-counter;
+    }
+    .nav-links a::before {
+      content:counter(nav-counter, decimal-leading-zero) '. ';
+      color:var(--green); font-size:12px;
+    }
+    .nav-links a:hover { color:var(--green); }
+    .nav-links { counter-reset: nav-counter; }
+
+    .nav-resume {
+      font-family:var(--font-mono); font-size:13px;
+      color:var(--green); border:1px solid var(--green);
+      padding:10px 18px; border-radius:var(--border-radius);
+      transition:var(--transition); margin-left:16px;
+    }
+    .nav-resume:hover { background:var(--green-tint); }
+
+    .theme-btn {
+      background:none; border:none; cursor:pointer;
+      color:var(--slate); font-size:20px;
+      margin-left:12px; padding:6px;
+      transition:var(--transition); line-height:1;
+    }
+    .theme-btn:hover { color:var(--green); transform:rotate(20deg); }
+
+    /* hamburger */
+    .ham { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+    .ham span { display:block; width:24px; height:2px; background:var(--green); border-radius:2px; transition:var(--transition); }
+    @media(max-width:768px){
+      .nav-links { display:none; }
+      .nav-resume { display:none; }
+      .ham { display:flex; }
+    }
+
+    /* mobile menu */
+    .mobile-menu {
+      position:fixed; inset:0; z-index:900;
+      background:var(--navy-light);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      gap:36px;
+      transform:translateX(100%);
+      transition:transform .4s cubic-bezier(.77,0,.175,1);
+    }
+    .mobile-menu.open { transform:translateX(0); }
+    .mobile-menu a {
+      font-family:var(--font-mono); font-size:16px;
+      color:var(--slate-lighter); letter-spacing:.1em;
+      counter-increment: mob-counter;
+    }
+    .mobile-menu a::before {
+      display:block; text-align:center;
+      content:counter(mob-counter, decimal-leading-zero) '.';
+      color:var(--green); font-size:12px; margin-bottom:4px;
+    }
+    .mobile-menu { counter-reset: mob-counter; }
+    .mobile-menu a:hover { color:var(--green); }
+    .mobile-menu .mob-resume {
+      font-family:var(--font-mono); font-size:14px;
+      color:var(--green); border:1px solid var(--green);
+      padding:12px 40px; border-radius:var(--border-radius);
+    }
+
+    /* ===================== SECTION BASE ===================== */
+    section {
+      max-width:1000px; margin:0 auto;
+      padding:100px 24px;
+    }
+
+    .section-title {
+      display:flex; align-items:center;
+      font-size:clamp(24px,4vw,32px);
+      font-weight:700; color:var(--slate-lighter);
+      white-space:nowrap; margin-bottom:50px;
+    }
+    .section-title::before {
+      counter-increment: section-counter;
+      content:counter(section-counter, decimal-leading-zero) '.';
+      font-family:var(--font-mono); font-size:clamp(16px,3vw,20px);
+      color:var(--green); margin-right:14px; font-weight:400;
+    }
+    .section-title::after {
+      content:''; display:block;
+      width:200px; height:1px;
+      background:var(--navy-lighter); margin-left:24px;
+    }
+    body { counter-reset: section-counter; }
+
+    /* ===================== HERO ===================== */
+    #hero {
+      min-height:100vh;
+      display:flex; flex-direction:column; justify-content:center;
+      padding-top: calc(var(--nav-height) + 40px);
+      max-width:1000px; margin:0 auto; padding-left:24px; padding-right:24px;
+    }
+
+    .hero-overline {
+      font-family:var(--font-mono); font-size:clamp(14px,2vw,16px);
+      color:var(--green); margin-bottom:24px;
+      opacity:0; animation: fadeUp .6s .1s forwards;
+    }
+    .hero-name {
+      font-size:clamp(40px,8vw,80px);
+      font-weight:800; color:var(--slate-lighter);
+      line-height:1.1; margin-bottom:8px;
+      opacity:0; animation: fadeUp .6s .25s forwards;
+    }
+    .hero-tagline {
+      font-size:clamp(36px,7vw,72px);
+      font-weight:800; color:var(--slate);
+      line-height:1.1; margin-bottom:32px;
+      opacity:0; animation: fadeUp .6s .35s forwards;
+    }
+    .hero-desc {
+      max-width:540px; font-size:clamp(15px,2vw,18px);
+      color:var(--slate); margin-bottom:48px;
+      opacity:0; animation: fadeUp .6s .45s forwards;
+    }
+    .hero-cta {
+      display:inline-block;
+      font-family:var(--font-mono); font-size:14px;
+      color:var(--green); border:1px solid var(--green);
+      padding:16px 28px; border-radius:var(--border-radius);
+      transition:var(--transition);
+      opacity:0; animation: fadeUp .6s .55s forwards;
+      align-self:start;
+    }
+    .hero-cta:hover { background:var(--green-tint); transform:translateY(-3px); box-shadow:0 8px 30px rgba(100,255,218,.15); }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* typed cursor */
+    .typed-cursor { color:var(--green); animation:blink .75s step-end infinite; }
+    @keyframes blink { 50% { opacity:0; } }
+
+    /* ===================== ABOUT ===================== */
+    .about-grid {
+      display:grid; grid-template-columns:3fr 2fr; gap:64px; align-items:start;
+    }
+    @media(max-width:768px) { .about-grid { grid-template-columns:1fr; } }
+
+    .about-text p { margin-bottom:16px; }
+    .about-text .tech-list {
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:8px 32px; margin-top:24px;
+      font-family:var(--font-mono); font-size:13px;
+    }
+    .about-text .tech-list li::before { content:'▹ '; color:var(--green); }
+
+    .about-photo {
+      position:relative; max-width:400px;
+    }
+    .about-photo-wrapper {
+      position:relative; border-radius:6px;
+      cursor:pointer;
+    }
+    .about-photo-wrapper::after {
+      content:''; position:absolute;
+      inset:0; border:2px solid var(--green);
+      border-radius:6px;
+      transform:translate(14px,14px);
+      transition:var(--transition); z-index:-1;
+    }
+    .about-photo-wrapper:hover::after { transform:translate(10px,10px); }
+    .about-photo-wrapper img {
+      border-radius:6px; width:100%;
+      display:block;
+    }
+    /* cert badges */
+    .cert-badges { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .cert-badge {
+      font-family:var(--font-mono); font-size:12px;
+      color:var(--green); border:1px solid var(--green);
+      padding:5px 12px; border-radius:99px;
+      background:var(--green-tint);
+    }
+
+    /* ===================== EXPERIENCE ===================== */
+    .exp-tabs {
+      display:flex; gap:0;
+    }
+    .exp-tab-list {
+      min-width:160px; border-left:2px solid var(--navy-lighter);
+      display:flex; flex-direction:column;
+    }
+    @media(max-width:640px) {
+      .exp-tabs { flex-direction:column; }
+      .exp-tab-list { flex-direction:row; overflow-x:auto; border-left:none; border-bottom:2px solid var(--navy-lighter); }
+    }
+    .tab-btn {
+      background:none; border:none; cursor:pointer;
+      font-family:var(--font-mono); font-size:13px;
+      color:var(--slate); text-align:left;
+      padding:14px 20px; transition:var(--transition);
+      border-left:2px solid transparent; margin-left:-2px;
+      white-space:nowrap;
+    }
+    @media(max-width:640px) { .tab-btn { border-left:none; border-bottom:2px solid transparent; margin-left:0; margin-bottom:-2px; } }
+    .tab-btn:hover { color:var(--green); background:var(--green-tint); }
+    .tab-btn.active { color:var(--green); border-left-color:var(--green); background:var(--green-tint); }
+    @media(max-width:640px) { .tab-btn.active { border-left-color:transparent; border-bottom-color:var(--green); } }
+
+    .exp-panel { display:none; padding:0 32px; }
+    .exp-panel.active { display:block; animation:fadeIn .3s ease; }
+    @media(max-width:640px) { .exp-panel { padding:24px 0 0; } }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+
+    .exp-title { font-size:22px; font-weight:600; color:var(--slate-lighter); margin-bottom:4px; }
+    .exp-company { color:var(--green); font-size:18px; }
+    .exp-date { font-family:var(--font-mono); font-size:13px; color:var(--slate); margin:6px 0 20px; }
+    .exp-duties li { position:relative; padding-left:24px; margin-bottom:10px; font-size:16px; }
+    .exp-duties li::before { content:'▹'; position:absolute; left:0; color:var(--green); }
+
+    /* ===================== PROJECTS ===================== */
+    .featured-projects { display:flex; flex-direction:column; gap:100px; }
+    .featured-project {
+      display:grid; grid-template-columns:1fr 1fr;
+      align-items:center; gap:32px;
+    }
+    .featured-project:nth-child(even) .proj-img-wrap { order:2; }
+    .featured-project:nth-child(even) .proj-info   { order:1; text-align:right; }
+    .featured-project:nth-child(even) .proj-tech   { justify-content:flex-end; }
+    .featured-project:nth-child(even) .proj-links  { justify-content:flex-end; }
+
+    @media(max-width:768px) {
+      .featured-project { grid-template-columns:1fr; }
+      .featured-project:nth-child(even) .proj-img-wrap { order:1; }
+      .featured-project:nth-child(even) .proj-info { order:2; text-align:left; }
+      .featured-project:nth-child(even) .proj-tech { justify-content:flex-start; }
+      .featured-project:nth-child(even) .proj-links{ justify-content:flex-start; }
+    }
+
+    .proj-img-wrap {
+      position:relative; border-radius:6px; overflow:hidden;
+      background:var(--navy-lighter);
+    }
+    .proj-img-wrap::after {
+      content:''; position:absolute; inset:0;
+      background:var(--green); opacity:.2; transition:var(--transition);
+    }
+    .proj-img-wrap:hover::after { opacity:0; }
+    .proj-img-wrap img { width:100%; display:block; filter:grayscale(20%); transition:var(--transition); }
+    .proj-img-wrap:hover img { filter:none; transform:scale(1.02); }
+    .proj-img-placeholder {
+      aspect-ratio:16/10;
+      background:linear-gradient(135deg,var(--navy-lighter) 0%, var(--navy-light) 100%);
+      display:flex; align-items:center; justify-content:center;
+      font-family:var(--font-mono); font-size:13px; color:var(--slate);
+    }
+
+    .proj-overline { font-family:var(--font-mono); font-size:13px; color:var(--green); margin-bottom:10px; }
+    .proj-name { font-size:clamp(20px,3vw,28px); font-weight:700; color:var(--slate-lighter); margin-bottom:20px; }
+    .proj-desc {
+      background:var(--navy-light); border-radius:6px;
+      padding:24px; font-size:15px; color:var(--slate);
+      margin-bottom:24px; box-shadow:0 10px 30px rgba(0,0,0,.2);
+    }
+    .proj-tech { display:flex; flex-wrap:wrap; gap:12px; font-family:var(--font-mono); font-size:12px; color:var(--slate); margin-bottom:20px; }
+    .proj-links { display:flex; gap:20px; }
+    .proj-links a { color:var(--slate-lighter); transition:var(--transition); }
+    .proj-links a:hover { color:var(--green); transform:translateY(-2px); }
+    .proj-links svg { width:20px; height:20px; }
+
+    /* other projects */
+    .other-projects { margin-top:80px; }
+    .other-title { text-align:center; font-size:clamp(20px,3vw,26px); font-weight:700; color:var(--slate-lighter); margin-bottom:48px; }
+    .other-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+    .other-card {
+      background:var(--navy-light);
+      border-radius:6px; padding:32px;
+      display:flex; flex-direction:column;
+      transition:var(--transition); cursor:default;
+    }
+    .other-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(0,0,0,.3); }
+    .other-card-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; }
+    .folder-icon { color:var(--green); }
+    .other-card-links { display:flex; gap:12px; color:var(--slate); }
+    .other-card-links a:hover { color:var(--green); }
+    .other-card h3 { font-size:18px; font-weight:600; color:var(--slate-lighter); margin-bottom:12px; }
+    .other-card p { font-size:14px; flex-grow:1; margin-bottom:20px; }
+    .other-card-tech { display:flex; flex-wrap:wrap; gap:12px; font-family:var(--font-mono); font-size:12px; color:var(--slate); margin-top:auto; }
+
+    /* ===================== CONTACT ===================== */
+    #contact { text-align:center; }
+    #contact .section-title { justify-content:center; }
+    #contact .section-title::after { display:none; }
+    .contact-overline { font-family:var(--font-mono); color:var(--green); margin-bottom:20px; }
+    .contact-heading { font-size:clamp(40px,6vw,60px); font-weight:800; color:var(--slate-lighter); margin-bottom:24px; }
+    .contact-desc { max-width:540px; margin:0 auto 48px; font-size:16px; }
+    .contact-email-btn {
+      display:inline-block;
+      font-family:var(--font-mono); font-size:14px;
+      color:var(--green); border:1px solid var(--green);
+      padding:20px 40px; border-radius:var(--border-radius);
+      transition:var(--transition);
+    }
+    .contact-email-btn:hover { background:var(--green-tint); transform:translateY(-3px); box-shadow:0 8px 30px rgba(100,255,218,.15); }
+
+    /* ===================== FOOTER ===================== */
+    footer {
+      text-align:center; padding:32px 24px;
+      font-family:var(--font-mono); font-size:13px; color:var(--slate);
+    }
+    footer a { color:var(--green); }
+
+    /* ===================== SCROLL ANIMATIONS ===================== */
+    .reveal {
+      opacity:0; transform:translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible { opacity:1; transform:none; }
+
+    /* ===================== MISC ===================== */
+    .green { color:var(--green); }
+    .mono  { font-family:var(--font-mono); }
+
+    /* Skill pill */
+    .skill-pill {
+      display:inline-block; font-family:var(--font-mono); font-size:13px;
+      color:var(--green); background:var(--green-tint);
+      padding:4px 12px; border-radius:99px;
+    }
+
+    /* glowing dot */
+    .dot-glow {
+      display:inline-block; width:10px; height:10px;
+      border-radius:50%; background:var(--green);
+      box-shadow:0 0 8px var(--green); margin-right:8px;
+      animation:dotPulse 2s ease infinite;
+    }
+    @keyframes dotPulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
+
+    /* ===================== MEDIA ===================== */
+    @media(max-width:480px) {
+      section { padding:80px 20px; }
+    }
+
+    /* ===================== FOOTER REDESIGN ===================== */
+    footer .footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-family: var(--font-mono);
+      color: var(--slate);
+    }
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .footer-logo span {
+      color: var(--green);
+    }
+    .footer-copy {
+      font-size: 13px;
+      margin-bottom: 12px;
+      color: var(--slate);
+    }
+    .footer-copy span {
+      color: var(--green);
+    }
+    .footer-love {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: var(--slate);
+    }
+    .footer-icon {
+      width: 16px;
+      height: 16px;
+      filter: brightness(0.8);
+    }
+
+    /* ===================== PARTICLES CANVAS ===================== */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
-    <!-- Mouse Follower -->
-    <div class="mouse-follower"></div>
+<canvas id="particles-canvas"></canvas>
 
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator">
-        <div class="scroll-progress"></div>
+<!-- LOADER -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">JS</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-text">Cargando</div>
+</div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress-bar" id="scrollBar"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- SIDE LEFT -->
+<div class="side-left">
+  <a href="https://github.com/jsantur" class="icon-link" target="_blank" rel="noreferrer" aria-label="GitHub">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.41c1.02 0 2.05.14 3 .41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.19.69.8.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+  </a>
+  <a href="https://linkedin.com/in/jsanturm" class="icon-link" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55V14.9c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.65H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM6.78 20.45H3.55V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+  </a>
+  <a href="https://wa.me/51916582265?text=Hola%2C%20vi%20tu%20portafolio" class="icon-link" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.28-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.11.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.13-.27-.2-.57-.35zM12 2A10 10 0 0 0 2.34 17.07L2 22l5.09-.33A10 10 0 1 0 12 2zm0 18.5a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17z"/></svg>
+  </a>
+</div>
+
+<!-- SIDE RIGHT -->
+<div class="side-right">
+  <a href="mailto:josephsanturm@gmail.com">josephsanturm@gmail.com</a>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo"><img src="assets/Images/logo.png" alt="JS" style="height:32px;width:auto;display:block;"></a>
+  <ul class="nav-links" role="list">
+    <li><a href="#about">Sobre Mí</a></li>
+    <li><a href="#experience">Experiencia</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+  <a href="assets/docs/cvJSANTUR.pdf" class="nav-resume dynamic-btn" target="_blank" rel="noopener">
+    <span class="btn-text">Currículum</span>
+    <span class="glitch-text" aria-hidden="true">Currículum</span>
+    <span class="glitch-text" aria-hidden="true">Currículum</span>
+  </a>
+  <button class="theme-btn" id="themeBtn" aria-label="Alternar tema">☀️</button>
+  <button class="ham" id="hamBtn" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
+  <a href="#about"      onclick="closeMobile()">Sobre Mí</a>
+  <a href="#experience" onclick="closeMobile()">Experiencia</a>
+  <a href="#projects"   onclick="closeMobile()">Proyectos</a>
+  <a href="#contact"    onclick="closeMobile()">Contacto</a>
+  <a href="assets/docs/cvJSANTUR.pdf" class="mob-resume dynamic-btn" target="_blank" rel="noopener" onclick="closeMobile()">
+    <span class="btn-text">Currículum</span>
+    <span class="glitch-text" aria-hidden="true">Currículum</span>
+    <span class="glitch-text" aria-hidden="true">Currículum</span>
+  </a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <p class="hero-overline">Hola, mi nombre es</p>
+  <h1 class="hero-name">Joseph Santur.<span class="typed-cursor">|</span></h1>
+  <h2 class="hero-tagline">Construyo cosas para la web.</h2>
+  <p class="hero-desc">
+    Soy Full Stack Developer con más de <span class="green underline-green">8 años de experiencia</span> creando aplicaciones robustas, escalables y con excelente experiencia de usuario.
+    Actualmente enfocado en React, Python, Java, Laravel, Docker y AWS.
+  </p>
+  <a href="#projects" class="hero-cta dynamic-btn">
+    <span class="btn-text">¡Mira mis proyectos!</span>
+    <span class="glitch-text" aria-hidden="true">¡Mira mis proyectos!</span>
+    <span class="glitch-text" aria-hidden="true">¡Mira mis proyectos!</span>
+  </a>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <h2 class="section-title reveal">Sobre Mí</h2>
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <p>
+        ¡Hola! Soy <strong class="green underline-green">Joseph</strong>, desarrollador Full Stack apasionado por crear experiencias digitales que combinen rendimiento, funcionalidad y diseño. Comencé mi camino en el desarrollo hace más de 8 años y desde entonces no he parado de construir soluciones.
+      </p>
+      <p>
+        Cuento con una <strong class="green underline-green">Maestría en Ingeniería de Software con Inteligencia Artificial</strong>, lo que me permite aplicar técnicas avanzadas de IA en proyectos reales. He trabajado en instituciones públicas y empresas privadas, liderando implementaciones completas de backend, frontend y DevOps.
+      </p>
+      <p>Algunas tecnologías con las que trabajo actualmente:</p>
+      <ul class="tech-list">
+        <li><span class="green underline-green"></span>React.js</span></li>
+        <li><span class="green underline-green">Python</span></li>
+        <li><span class="green underline-green">Java</span></li>
+        <li><span class="green underline-green">Laravel</span></li>
+        <li><span class="green underline-green">Docker</span></li>
+        <li><span class="green underline-green">AWS</span></li>
+        <li><span class="green underline-green">PostgreSQL</span></li>
+        <li><span class="green underline-green">API Gemini (IA)</span></li>
+      </ul>
+      <div class="cert-badges" style="margin-top:28px;">
+        <span class="cert-badge">Oracle AI Certified</span>
+        <span class="cert-badge">Cisco Cybersecurity</span>
+        <span class="cert-badge">PCAP Python</span>
+        <span class="cert-badge">NDG Linux</span>
+      </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <a href="#home" class="brand" aria-label="Inicio - Joseph Santur">
-                        <span class="brand-logo" aria-hidden="true">
-                            <img src="./assets/Images/logo.png" alt="" class="brand-logo__img" width="56" height="56" loading="lazy" decoding="async">
-                        </span>
-                        <span class="brand-name text-xl font-bold">Joseph Santur</span>
-                    </a>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link">Inicio</a>
-                        <a href="#about" class="nav-link">Sobre Mí</a>
-                        <a href="#skills" class="nav-link">Habilidades</a>
-                        <a href="#experience" class="nav-link">Experiencia</a>
-                        <a href="#projects" class="nav-link">Proyectos</a>
-                        <a href="#contact" class="nav-link">Contacto</a>
-                        <a href="#cv" class="nav-link">CV</a>
-                        
-                        <!-- Theme Toggle -->
-                        <div class="theme-toggle" id="theme-toggle" tabindex="0" role="button" aria-label="Alternar tema">
-                            <span class="theme-icon sun-icon">☀️</span>
-                            <span class="theme-icon moon-icon">🌙</span>
-                            <span class="knob" aria-hidden="true"></span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center space-x-4">
-                    <!-- Theme Toggle Mobile -->
-                    <div class="theme-toggle" id="theme-toggle-mobile" tabindex="0" role="button" aria-label="Alternar tema">
-                        <span class="theme-icon sun-icon">☀️</span>
-                        <span class="theme-icon moon-icon">🌙</span>
-                        <span class="knob" aria-hidden="true"></span>
-                    </div>
-                    
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="mobile-menu md:hidden fixed top-16 right-0 w-64 h-screen bg-white border-l border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-600 hover:text-slate-900">Inicio</a>
-                <a href="#about" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-600 hover:text-slate-900">Sobre Mí</a>
-                <a href="#skills" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-600 hover:text-slate-900">Habilidades</a>
-                <a href="#experience" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-600 hover:text-slate-900">Experiencia</a>
-                <a href="#projects" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-600 hover:text-slate-900">Proyectos</a>
-                <a href="#contact" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-600 hover:text-slate-900">Contacto</a>
-                <a href="#cv" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-600 hover:text-slate-900">CV</a>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <!-- Floating Elements -->
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="hero-content fade-in-left">
-                    <h1 class="hero-title">
-                        <span>Hola, soy</span><br>
-                        <span class="gradient-text">Joseph Santur</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Full Stack Developer especializado en crear experiencias digitales excepcionales. 
-                        Apasionado por el desarrollo web, móvil y de escritorio con tecnologías modernas.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="btn btn-primary">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                            Contáctame
-                        </a>
-                        <a href="#cv" class="btn btn-secondary">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                            Descargar CV
-                        </a>
-                    </div>
-                    
-                    <!-- Social Links -->
-                    <div class="flex space-x-6 mt-8">
-                        <a href="https://linkedin.com" target="_blank" class="text-slate-400 hover:text-slate-600 transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com" target="_blank" class="text-slate-400 hover:text-slate-600 transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="hero-image fade-in-right">
-                    <div class="relative">
-                        <img src="./assets/Images/hero-portrait.png" alt="Joseph Santur" class="w-80 h-80 object-cover" loading="lazy" decoding="async" width="320" height="320">
-                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-green-400 to-blue-500 rounded-full opacity-20 animate-pulse"></div>
-                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="section-title">Sobre Mí</h2>
-                <p class="section-subtitle">Conoce mi historia y pasión por el desarrollo</p>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in-left">
-                    <div class="card">
-                        <h3 class="text-2xl font-semibold mb-4" style="color: var(--text-primary);">Desarrollador Full Stack Versátil</h3>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            Soy un desarrollador de software apasionado con más de 8 años de experiencia en la creación de soluciones completas. 
-                            Mi expertise abarca desde aplicaciones web y móviles hasta software de escritorio empresarial.
-                        </p>
-                        <p class="text-slate-600 mb-6 leading-relaxed">
-                            Me especializo en arquitectura, consultoría y desarrollo de software con un enfoque particular en aplicaciones 
-                            Python para web y escritorio. Aplico mis conocimientos en diseño gráfico y corporativo para crear interfaces 
-                            atractivas y funcionales que mejoran la experiencia del usuario.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 mt-8">
-                            <div class="text-center">
-                                <div class="text-3xl font-bold" style="color: var(--green);">8+</div>
-                                <div class="text-slate-500">Años de Experiencia</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold" style="color: var(--green);">10+</div>
-                                <div class="text-slate-500">Proyectos Completados</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="fade-in-right">
-                    <div class="space-y-6">
-                        <div class="card">
-                            <h4 class="text-lg font-semibold mb-2" style="color: var(--text-primary);">Educación</h4>
-                            <div class="space-y-3">
-                                <div>
-                                    <div class="font-medium" style="color: var(--green);">Maestría en Ciencias (M.Sc.)</div>
-                                    <div class="text-slate-500">Ingeniería de Software con Inteligencia Artificial</div>
-                                </div>
-                                <div>
-                                    <div class="font-medium" style="color: var(--green);">Licenciatura en Ciencias (B.Sc.)</div>
-                                    <div class="text-slate-500">Ingeniería de Redes y Telecomunicaciones</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <h4 class="text-lg font-semibold mb-2" style="color: var(--text-primary);">Certificaciones</h4>
-                            <div class="space-y-2">
-                                <div class="text-slate-600">• Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</div>
-                                <div class="text-slate-600">• PCAP: Programming Essentials in Python</div>
-                                <div class="text-slate-600">• Cybersecurity Essentials - Cisco Networking Academy</div>
-                                <div class="text-slate-600">• NDG LINUX ESSENTIALS</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="section-title">Habilidades Técnicas</h2>
-                <p class="section-subtitle">Tecnologías y herramientas que domino</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Frontend Skills -->
-                <div class="card scale-in" style="animation-delay: 0.1s;">
-                    <h3 class="text-xl font-semibold mb-4 flex items-center" style="color: var(--text-primary);">
-                        <span class="w-3 h-3 rounded-full mr-3" style="background: var(--green);"></span>
-                        Desarrollo Frontend
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">HTML5 / CSS3</span>
-                                <span class="skill-level">Experimentado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">JavaScript (ES6+)</span>
-                                <span class="skill-level">Avanzado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">React.js</span>
-                                <span class="skill-level">Avanzado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">TypeScript</span>
-                                <span class="skill-level">Intermedio</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Backend Skills -->
-                <div class="card scale-in" style="animation-delay: 0.2s;">
-                    <h3 class="text-xl font-semibold mb-4 flex items-center" style="color: var(--text-primary);">
-                        <span class="w-3 h-3 rounded-full mr-3" style="background: var(--pink);"></span>
-                        Desarrollo Backend
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Java</span>
-                                <span class="skill-level">Avanzado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-level">Experimentado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">PHP / Laravel (Framework PHP)</span>
-                                <span class="skill-level">Avanzado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">PostgreSQL</span>
-                                <span class="skill-level">Intermedio</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Tools & Others -->
-                <div class="card scale-in" style="animation-delay: 0.3s;">
-                    <h3 class="text-xl font-semibold mb-4 flex items-center" style="color: var(--text-primary);">
-                        <span class="w-3 h-3 rounded-full mr-3" style="background: #f59e0b;"></span>
-                        Herramientas & Otros
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Git & GitHub/GitLab</span>
-                                <span class="skill-level">Experimentado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Docker (Contenedores)</span>
-                                <span class="skill-level">Intermedio</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">AWS (Servicios Cloud)</span>
-                                <span class="skill-level">Intermedio</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">React Native (Desarrollo Móvil)</span>
-                                <span class="skill-level">Avanzado</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 82%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="section-title">Experiencia Profesional</h2>
-                <p class="section-subtitle">Mi trayectoria en el desarrollo de software</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-8">
-                    <!-- Experience Item 1 -->
-                    <div class="card experience-item fade-in-up" style="animation-delay: 0.1s;">
-                        <div class="experience-header">
-                            <div>
-                                <h3 class="experience-title">Implementación de Sistemas y Monitoreo de Seguridad</h3>
-                                <p class="experience-company">Subgerencia de Serenazgo / MPT</p>
-                            </div>
-                            <span class="experience-date">Noviembre 2024 – Agosto 2025 (9 meses)</span>
-                        </div>
-                        <p class="experience-description">
-                            Lideré la implementación del Sistema de Monitoreo de Central de Cámaras de Videovigilancia para la institución. Este proyecto fortaleció la capacidad operativa del Serenazgo, mejorando la eficacia en el control y respuesta de seguridad ciudadana.
-                        </p>
-                        <div class="experience-tags">
-                            <span class="tag tag-green">React.js</span>
-                            <span class="tag tag-blue">API IA-Gemini</span>
-                            <span class="tag tag-purple">Python</span>
-                            <span class="tag tag-gray">PostgreSQL</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Experience Item 2 -->
-                    <div class="card experience-item fade-in-up" style="animation-delay: 0.2s;">
-                        <div class="experience-header">
-                            <div>
-                                <h3 class="experience-title">Desarrollador de Software y Bases de Datos</h3>
-                                <p class="experience-company">FABRICACIONES EN CAUCHO (FAV)</p>
-                            </div>
-                            <span class="experience-date">Marzo 2020 – Junio 2020 (3 meses)</span>
-                        </div>
-                        <p class="experience-description">
-                            Desarrollé un sistema integral de escritorio utilizando Java y C++ que incorporó facturación electrónica y está actualmente en uso. Me encargué de la gestión y administración de las bases de datos del proyecto.
-                        </p>
-                        <div class="experience-tags">
-                            <span class="tag tag-green">C++</span>
-                            <span class="tag tag-blue">Java</span>
-                            <span class="tag tag-yellow">MongoDB</span>
-                            <span class="tag tag-indigo">Docker</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Experience Item 3 -->
-                    <div class="card experience-item fade-in-up" style="animation-delay: 0.3s;">
-                        <div class="experience-header">
-                            <div>
-                                <h3 class="experience-title">Automatización Administrativa</h3>
-                                <p class="experience-company">C.E.B.A. “ROSA DE LOS ÁNGELES”</p>
-                            </div>
-                            <span class="experience-date">Febrero 2015 – Octubre 2015 (8 meses)</span>
-                        </div>
-                        <p class="experience-description">
-                            Responsable del Área Administrativa. Diseñé e implementé un programa automatizado en Excel para el registro de asistencia de alumnos y docentes, mejorando la eficiencia del proceso de control de asistencia.
-                        </p>
-                        <div class="experience-tags">
-                            <span class="tag tag-green">Macros VBA</span>
-                            <span class="tag tag-blue">UML</span>
-                            <span class="tag tag-red">Excel Avanzado.</span>
-                            <span class="tag tag-orange">MySQL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="section-title">Proyectos Destacados</h2>
-                <p class="section-subtitle">Algunos de mis trabajos más recientes</p>
-            </div>
-            
-            <div class="project-grid">
-                <!-- Project 1 (Seguridad y Monitoreo) -->
-                <div class="project-card fade-in-up" style="animation-delay: 0.1s;">
-                    <div class="project-image">
-                        <img src="./assets/Images/project-webapp.webp" alt="Implementación de Sistemas y Monitoreo de Seguridad" loading="lazy" decoding="async" width="1280" height="720">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Sistema de Control de Unidades Vehiculares (Pick-up / Sedán)</h3>
-                        <p class="project-description">
-                            Plataforma de gestión y monitoreo operativo diseñada para optimizar el control de la flota de serenazgo. Permite el seguimiento detallado de kilómetros recorridos, servicios de auxilio público y personal operativo por turno (diurno/nocturno).
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag tag-green">React.js</span>
-                            <span class="tag tag-blue">API IA-Gemini</span>
-                            <span class="tag tag-purple">Python</span>
-                            <span class="tag tag-gray">PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Demo en Vivo →</a>
-                            <a href="#" class="project-link">GitHub →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 (Sistema de Facturación y Gestión) -->
-                <div class="project-card fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="project-image">
-                        <img src="./assets/Images/project-mobile.webp" alt="Desarrollador de Software y Bases de Datos" loading="lazy" decoding="async" width="1280" height="720">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Sistema de Facturación y Gestión</h3>
-                        <p class="project-description">
-                            Aplicación de escritorio para la automatización total del ciclo de facturación electrónica de la empresa. Su función principal es generar comprobantes válidos, administrar los registros de clientes y mantener la integridad de la base de datos.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag tag-green">C++</span>
-                            <span class="tag tag-blue">Java</span>
-                            <span class="tag tag-yellow">MongoDB</span>
-                            <span class="tag tag-indigo">Docker</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Demo en Vivo →</a>
-                            <a href="#" class="project-link">GitHub →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 (Automatización Administrativa) -->
-                <div class="project-card fade-in-up" style="animation-delay: 0.3s;">
-                    <div class="project-image">
-                        <img src="./assets/Images/project-desktop.webp" alt="Automatización Administrativa" loading="lazy" decoding="async" width="1280" height="720">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Automatización Administrativa</h3>
-                        <p class="project-description">
-                            Herramienta de software diseñada para digitalizar y centralizar el registro y control de la asistencia del personal en instituciones. Su objetivo es eliminar el proceso manual, garantizar la precisión de los datos y generar reportes de recursos humanos de manera instantánea.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag tag-green">Macros VBA</span>
-                            <span class="tag tag-blue">UML</span>
-                            <span class="tag tag-red">Excel Avanzado</span>
-                            <span class="tag tag-orange">MySQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Demo en Vivo →</a>
-                            <a href="#" class="project-link">GitHub →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CV Section -->
-    <section id="cv" class="section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="section-title">Curriculum Vitae</h2>
-                <p class="section-subtitle">Descarga mi CV completo en PDF</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="fade-in-left">
-                        <div class="card">
-                            <h3 class="text-2xl font-semibold mb-4" style="color: var(--text-primary);">¿Por qué descargar mi CV?</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1" style="background: rgba(100, 255, 218, 0.1);">
-                                        <svg class="w-4 h-4" style="color: var(--green);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold" style="color: var(--text-primary);">Información Detallada</h4>
-                                        <p class="text-slate-600 text-sm">Experiencia completa, educación y certificaciones</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1" style="background: rgba(100, 255, 218, 0.1);">
-                                        <svg class="w-4 h-4" style="color: var(--green);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold" style="color: var(--text-primary);">Diseño Profesional</h4>
-                                        <p class="text-slate-600 text-sm">Formato PDF optimizado para impresión y digital</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3 mt-1" style="background: rgba(100, 255, 218, 0.1);">
-                                        <svg class="w-4 h-4" style="color: var(--green);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold" style="color: var(--text-primary);">Actualizado</h4>
-                                        <p class="text-slate-600 text-sm">Información más reciente y relevante</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-8">
-                                <a id="download-cv-btn" href="./assets/docs/cvJSANTUR.pdf" download class="btn btn-primary w-full justify-center">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                    </svg>
-                                    Descargar CV (PDF)
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="fade-in-right">
-                        <div class="relative">
-                            <div class="interactive-card" aria-label="Vista previa interactiva del CV" tabindex="0">
-                                <div class="interactive-card__shadow" aria-hidden="true"></div>
-                                <img src="./assets/Images/cv-preview.webp" alt="Vista previa del CV" class="w-full rounded-lg interactive-card__img" loading="lazy" decoding="async" width="800" height="1066">
-                                <div class="interactive-card__overlay absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg pointer-events-none" aria-hidden="true"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- In-page toast for CV download -->
-    <div id="cv-download-toast" aria-hidden="true" style="position:fixed;left:50%;transform:translateX(-50%) translateY(20px);bottom:24px;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:linear-gradient(90deg,#06b6d4,#10b981);color:#fff;box-shadow:0 6px 18px rgba(2,6,23,0.6);">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width:20px;height:20px;color:rgba(255,255,255,0.95);flex:0 0 auto;">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-        </svg>
-        <div style="font-size:14px;">Tu descarga comenzará en breve…</div>
+    <div class="about-photo reveal" style="transition-delay:.2s">
+      <div class="about-photo-wrapper">
+        <img src="assets/Images/me6.webp" alt="Joseph Santur">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience">
+  <h2 class="section-title reveal">Experiencia</h2>
+  <div class="exp-tabs reveal">
+    <div class="exp-tab-list" role="tablist">
+      <button class="tab-btn active" data-tab="mpt" role="tab" aria-selected="true">MPT</button>
+      <button class="tab-btn" data-tab="fav" role="tab" aria-selected="false">FAV</button>
+      <button class="tab-btn" data-tab="ceba" role="tab" aria-selected="false">C.E.B.A.</button>
     </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-up">
-                <h2 class="section-title">Contáctame</h2>
-                <p class="section-subtitle">¿Listo para trabajar juntos? ¡Hablemos!</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Contact Info -->
-                    <div class="fade-in-left">
-                        <div class="card">
-                            <h3 class="text-2xl font-semibold mb-6" style="color: var(--text-primary);">Información de Contacto</h3>
-                            <div class="contact-info">
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <svg class="w-6 h-6" style="color: var(--green);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 style="color: var(--text-primary);">Email</h4>
-                                        <p>josephsanturm@gmail.com</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <svg class="w-6 h-6" style="color: #3b82f6;" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 style="color: var(--text-primary);">LinkedIn</h4>
-                                        <p>linkedin.com/in/jsanturm</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <svg class="w-6 h-6" style="color: #a855f7;" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 style="color: var(--text-primary);">GitHub</h4>
-                                        <p>github.com/jsantur</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <!-- WhatsApp icon -->
-                                        <svg class="w-6 h-6" style="color: #25D366;" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M20.52 3.478A11.91 11.91 0 0012.005.996C6.08.996 1.2 5.876 1.2 11.8c0 2.082.548 4.02 1.6 5.75L.12 23.4l6.132-1.6a11.762 11.762 0 005.753 1.42c5.925 0 10.805-4.88 10.805-10.805 0-3.03-1.178-5.87-3.388-7.937zM12.005 21.6a9.4 9.4 0 01-4.94-1.35l-.35-.21-3.64.95.97-3.55-.23-.36A9.402 9.402 0 012.6 11.8c0-5.05 4.1-9.15 9.405-9.15 2.51 0 4.86.98 6.63 2.76 1.77 1.78 2.74 4.14 2.64 6.66-.1 5.05-4.2 9.15-9.28 9.15z"/>
-                                    </div>
-                                    <div>
-                                        <h4 style="color: var(--text-primary);">WhatsApp</h4>
-                                        <p><a href="https://wa.me/51977201449" target="_blank" rel="noopener" style="color: inherit; text-decoration:none; border-bottom: none;">+51 977 201 449</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Form -->
-                    <div class="fade-in-right">
-                        <div class="card">
-                            <form class="space-y-6" id="contact-form">
-                                <div class="form-group">
-                                    <label for="name" class="form-label">Nombre</label>
-                                    <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message" class="form-label">Mensaje</label>
-                                    <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-full justify-center">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                                    </svg>
-                                    Enviar Mensaje
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- MPT -->
+    <div class="exp-panel active" id="panel-mpt" role="tabpanel">
+      <h3 class="exp-title">Full Stack Developer <span class="exp-company">@ MPT</span></h3>
+      <p class="exp-date mono">Municipalidad Provincial de Trujillo · 2022 — Presente</p>
+      <ul class="exp-duties">
+        <li>Diseñé e implementé el <strong class="green underline-green">Sistema de Control de Unidades Vehiculares</strong> para la flota de serenazgo usando React.js y la API Gemini de Google.</li>
+        <li>Desarrollé servicios backend con Python/FastAPI integrados a PostgreSQL, logrando una reducción del 40 % en tiempos de reporte operativo.</li>
+        <li>Automaticé flujos de datos con Docker y pipelines CI/CD, mejorando la confiabilidad del sistema a un 99.8 % de uptime.</li>
+        <li>Colaboré con equipos multidisciplinarios para levantar requerimientos y entregar sprints bisemanales bajo metodología Scrum.</li>
+      </ul>
+    </div>
+
+    <!-- FAV -->
+    <div class="exp-panel" id="panel-fav" role="tabpanel">
+      <h3 class="exp-title">Desarrollador de Software <span class="exp-company">@ FAV</span></h3>
+      <p class="exp-date mono">Fundación Ángel Vive · 2019 — 2022</p>
+      <ul class="exp-duties">
+        <li>Construí el <strong class="green underline-green">Sistema de Facturación y Gestión</strong> de escritorio en C++ y Java con integración a MongoDB, acelerando el ciclo de facturación en un 60 %.</li>
+        <li>Diseñé la arquitectura de microservicios desplegada en contenedores Docker, facilitando el mantenimiento y la escalabilidad horizontal.</li>
+        <li>Realicé migraciones de bases de datos y procedimientos almacenados, asegurando integridad de datos durante procesos de alta carga.</li>
+        <li>Documenté la API REST con Swagger y capacité al equipo interno en el consumo de los servicios.</li>
+      </ul>
+    </div>
+
+    <!-- CEBA -->
+    <div class="exp-panel" id="panel-ceba" role="tabpanel">
+      <h3 class="exp-title">Docente de Informática <span class="exp-company">@ C.E.B.A.</span></h3>
+      <p class="exp-date mono">Centro de Educación Básica Alternativa · 2017 — 2019</p>
+      <ul class="exp-duties">
+        <li>Diseñé el currículo de informática y programación básica para adultos, adaptando contenidos a perfiles sin experiencia técnica previa.</li>
+        <li>Implementé la herramienta de <strong class="green underline-green">Automatización Administrativa</strong> con Macros VBA y Excel Avanzado para control de asistencia institucional.</li>
+        <li>Capacité a 120+ estudiantes en ofimática, manejo de bases de datos MySQL y conceptos de redes.</li>
+        <li>Fui responsable del mantenimiento preventivo del laboratorio de 30 equipos y la infraestructura de red local.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+  <h2 class="section-title reveal">Proyectos</h2>
+
+  <div class="featured-projects">
+
+    <!-- Project 1 -->
+    <div class="featured-project reveal">
+      <div class="proj-img-wrap">
+        <img src="assets/Images/project-webapp.webp" alt="Control Vehicular" style="width:100%;border-radius:6px;display:block;">
+      </div>
+      <div class="proj-info">
+        <p class="proj-overline">Proyecto Destacado</p>
+        <h3 class="proj-name">Control Vehicular de Serenazgo</h3>
+        <div class="proj-desc">
+          Plataforma web de monitoreo y gestión operativa de la flota de serenazgo de la MPT. Incluye seguimiento de kilómetros, servicios de auxilio público, personal por turno (diurno/nocturno) y generación de reportes con inteligencia artificial vía API Gemini.
         </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p>© 2023-2025 Joseph Santur Mogollón V5. Desarrollado con ❤️ desde Perú para el mundo.</p>
-            </div>
+        <ul class="proj-tech">
+          <li>React.js</li><li>Python</li><li>FastAPI</li><li>API Gemini</li><li>PostgreSQL</li><li>Docker</li>
+        </ul>
+        <div class="proj-links">
+          <a href="#" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.41c1.02 0 2.05.14 3 .41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.19.69.8.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="#" aria-label="Demo" title="Demo en vivo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
-    </footer>
-    
-    <!-- Scroll-to-top hand button -->
-    <button id="scroll-hand" aria-label="Ir al inicio" title="Ir al inicio" style="display:none;" class="scroll-hand">
-        <!-- Use mano.png wrapped in a dark box so it reads on light themes -->
-        <span class="scroll-hand-box" aria-hidden="true">
-            <img src="./assets/Images/mano.png" alt="Mano subir" class="scroll-hand-img" loading="lazy" decoding="async" width="80" height="80">
-        </span>
-    </button>
-    
-    <!-- JavaScript -->
-    <script src="./assets/js/optimizations.js"></script>
-    <script>
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-        const html = document.documentElement;
-        
-        function toggleTheme() {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            // Add theme transition effect
-            html.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-            setTimeout(() => {
-                html.style.transition = '';
-            }, 500);
-        }
-        
-        themeToggle.addEventListener('click', toggleTheme);
-        if (themeToggleMobile) {
-            themeToggleMobile.addEventListener('click', toggleTheme);
-        }
+      </div>
+    </div>
 
-        // Keyboard accessibility: toggle with Enter or Space when the toggle has focus
-        function handleToggleKey(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleTheme();
-            }
-        }
+    <!-- Project 2 -->
+    <div class="featured-project reveal">
+      <div class="proj-img-wrap">
+        <img src="assets/Images/project-mobile.webp" alt="Sistema de Facturación" style="width:100%;border-radius:6px;display:block;">
+      </div>
+      <div class="proj-info">
+        <p class="proj-overline">Proyecto Destacado</p>
+        <h3 class="proj-name">Sistema de Facturación y Gestión</h3>
+        <div class="proj-desc">
+          Aplicación de escritorio para la automatización total del ciclo de facturación electrónica. Genera comprobantes válidos, administra registros de clientes y mantiene integridad en la base de datos con alta disponibilidad gracias a contenedores Docker.
+        </div>
+        <ul class="proj-tech">
+          <li>C++</li><li>Java</li><li>MongoDB</li><li>Docker</li><li>Swing UI</li>
+        </ul>
+        <div class="proj-links">
+          <a href="#" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.41c1.02 0 2.05.14 3 .41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.19.69.8.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="#" aria-label="Demo" title="Demo en vivo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-        themeToggle.addEventListener('keydown', handleToggleKey);
-        if (themeToggleMobile) themeToggleMobile.addEventListener('keydown', handleToggleKey);
-        
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', savedTheme);
-        
-        // Mouse follower
-        const mouseFollower = document.querySelector('.mouse-follower');
-        let mouseX = 0;
-        let mouseY = 0;
-        let followerX = 0;
-        let followerY = 0;
-        
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-        
-        function updateFollower() {
-            followerX += (mouseX - followerX) * 0.1;
-            followerY += (mouseY - followerY) * 0.1;
-            
-            mouseFollower.style.transform = `translate(${followerX - 10}px, ${followerY - 10}px)`;
-            requestAnimationFrame(updateFollower);
-        }
-        updateFollower();
-        
-        // Scroll progress
-        const scrollProgress = document.querySelector('.scroll-progress');
-        
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            scrollProgress.style.width = scrollPercent + '%';
-        });
-        
-        // Enhanced animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                    
-                    // Animate skill bars when they come into view
-                    if (entry.target.classList.contains('card')) {
-                        const skillBars = entry.target.querySelectorAll('.skill-progress');
-                        skillBars.forEach((bar, index) => {
-                            setTimeout(() => {
-                                bar.style.animation = 'none';
-                                bar.offsetHeight;
-                                bar.style.animation = `fillBar 1.5s ease-out ${index * 0.1}s forwards`;
-                            }, 200);
-                        });
-                    }
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all animated elements
-        document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in').forEach(el => {
-            observer.observe(el);
-        });
-        
-        // Parallax effect for floating elements
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.floating-element');
-            
-            parallaxElements.forEach((element, index) => {
-                const speed = 0.5 + (index * 0.1);
-                element.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
-        
-        // Enhanced hover effects
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-        
-        // Form submission with animation
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
+    <!-- Project 3 -->
+    <div class="featured-project reveal">
+      <div class="proj-img-wrap">
+        <img src="assets/Images/project-desktop.webp" alt="Sistema de Gestión" style="width:100%;border-radius:6px;display:block;">
+      </div>
+      <div class="proj-info">
+        <p class="proj-overline">Proyecto Destacado</p>
+        <h3 class="proj-name">Automatización Administrativa</h3>
+        <div class="proj-desc">
+          Herramienta para digitalizar y centralizar el control de asistencia del personal en instituciones educativas. Elimina el registro manual, garantiza precisión de los datos y genera reportes de RRHH de manera instantánea con Macros VBA e integración MySQL.
+        </div>
+        <ul class="proj-tech">
+          <li>Macros VBA</li><li>Excel Avanzado</li><li>MySQL</li><li>UML</li>
+        </ul>
+        <div class="proj-links">
+          <a href="#" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.41c1.02 0 2.05.14 3 .41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.19.69.8.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <p class="contact-overline mono reveal">04. ¿Qué sigue?</p>
+  <h2 class="contact-heading reveal">Ponte en Contacto</h2>
+  <p class="contact-desc reveal">
+    Si tienes una oportunidad, un proyecto o simplemente quieres saludar, mi bandeja de entrada siempre está abierta. <span class="green underline-green">¡Te responderé!</span>
+  </p>
+  <a href="https://wa.me/51916582265?text=Hola%2C%20te%20contacto%20desde%20tu%20portafolio" class="contact-email-btn reveal dynamic-btn" target="_blank" rel="noopener">
+    <span class="btn-text">Dime Hola ✉️</span>
+    <span class="glitch-text" aria-hidden="true">Dime Hola ✉️</span>
+    <span class="glitch-text" aria-hidden="true">Dime Hola ✉️</span>
+  </a>
 
-                // Animate button
-                submitBtn.innerHTML = `
-                    <svg class="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                    </svg>
-                    Preparando WhatsApp...
-                `;
-                submitBtn.disabled = true;
+  <div style="display:flex;justify-content:center;gap:32px;margin-top:48px;" class="reveal">
+    <a href="https://linkedin.com/in/jsanturm" target="_blank" rel="noreferrer" style="color:var(--slate);transition:color .25s;" onmouseover="this.style.color='var(--green)'" onmouseout="this.style.color='var(--slate)'">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55V14.9c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.65H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM6.78 20.45H3.55V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+    </a>
+    <a href="https://github.com/jsantur" target="_blank" rel="noreferrer" style="color:var(--slate);transition:color .25s;" onmouseover="this.style.color='var(--green)'" onmouseout="this.style.color='var(--slate)'">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.41c1.02 0 2.05.14 3 .41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.19.69.8.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+    </a>
+    <a href="https://wa.me/51916582265?text=Hola%2C%20vi%20tu%20portafolio" target="_blank" rel="noreferrer" style="color:var(--slate);transition:color .25s;" onmouseover="this.style.color='var(--green)'" onmouseout="this.style.color='var(--slate)'">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.28-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.48.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.11.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.13-.27-.2-.57-.35zM12 2A10 10 0 0 0 2.34 17.07L2 22l5.09-.33A10 10 0 1 0 12 2zm0 18.5a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17z"/></svg>
+    </a>
+  </div>
+</section>
 
-                // Build message and open WhatsApp chat
-                const name = encodeURIComponent(document.getElementById('name').value || 'Sin nombre');
-                const email = encodeURIComponent(document.getElementById('email').value || 'Sin email');
-                const message = encodeURIComponent(document.getElementById('message').value || '');
+<!-- FOOTER -->
+<footer>
+  <div class="footer">
+    <div class="footer-logo">{ <span>JS</span> }</div>
+    <div class="footer-copy">© 2014–2026 <span>JSantur by Joseph Santur</span> · v5</div>
+    <div class="footer-love">
+      <img src="assets/Images/github.svg" class="footer-icon" alt="GitHub"> 
+      Building software with ♥ from Perú to the world.
+    </div>
+  </div>
+</footer>
 
-                const phone = '51977201449'; // international format without +
-                const text = `Hola, soy ${name}%0AEmail: ${email}%0A%0AMensaje:%0A${message}`;
-                const waLink = `https://wa.me/${phone}?text=${text}`;
+<script>
+/* ============ LOADER ============ */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+    document.body.style.overflow = '';
+  }, 2000);
+});
+document.body.style.overflow = 'hidden';
 
-                // Slight delay to show animation then open WhatsApp in new tab
-                setTimeout(() => {
-                    window.open(waLink, '_blank');
+/* ============ CURSOR ============ */
+const dot  = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mx=0, my=0, rx=0, ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; });
+(function animCursor(){
+  rx += (mx - rx) * .18;
+  ry += (my - ry) * .18;
+  dot.style.left  = mx + 'px';
+  dot.style.top   = my + 'px';
+  ring.style.left = rx + 'px';
+  ring.style.top  = ry + 'px';
+  requestAnimationFrame(animCursor);
+})();
+document.querySelectorAll('a, button, [role="tab"]').forEach(el => {
+  el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+  el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+});
+document.addEventListener('mouseleave', () => { dot.style.opacity=0; ring.style.opacity=0; });
+document.addEventListener('mouseenter', () => { dot.style.opacity=1; ring.style.opacity=.5; });
 
-                    // Success feedback
-                    submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-                    submitBtn.innerHTML = `
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        WhatsApp abierto
-                    `;
+/* ============ SCROLL PROGRESS ============ */
+const bar = document.getElementById('scrollBar');
+window.addEventListener('scroll', () => {
+  const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  bar.style.width = pct + '%';
+}, {passive:true});
 
-                    setTimeout(() => {
-                        contactForm.reset();
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.style.background = '';
-                    }, 1500);
-                }, 900);
-            });
-        }
-        
-        // Initialize AOS
-        if (typeof AOS !== 'undefined') {
-            AOS.init({
-                duration: 1000,
-                once: true,
-                offset: 100
-            });
-        }
-        
-        // Welcome message
-        console.log(`
-        🌟 ¡Bienvenido al Portfolio de Joseph Santur! 🌟
-        
-        ✨ Características implementadas:
-        • Cambio de tema día/noche
-        • Efectos flotantes y animaciones
-        • Seguimiento del mouse
-        • Indicador de scroll
-        • Transiciones suaves
-        
-        🚀 Tecnologías utilizadas:
-        • HTML5 + CSS3 + JavaScript
-        • Tailwind CSS
-        • AOS Animations
-        • Custom animations
-        
-        📧 Contacto: joseph.santur@example.com
-        `);
-        // CV download toast + behavior
-        (function() {
-            const downloadBtn = document.getElementById('download-cv-btn');
-            const toast = document.getElementById('cv-download-toast');
+/* ============ SCROLL REVEAL ============ */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); }
+  });
+}, { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-            function showToast() {
-                if (!toast) return;
-                toast.style.opacity = '1';
-                toast.style.transform = 'translateX(-50%) translateY(0)';
-                toast.setAttribute('aria-hidden', 'false');
-                toast.style.pointerEvents = 'auto';
-                // hide after 2s
-                setTimeout(() => {
-                    toast.style.opacity = '0';
-                    toast.style.transform = 'translateX(-50%) translateY(20px)';
-                    toast.setAttribute('aria-hidden', 'true');
-                    toast.style.pointerEvents = 'none';
-                }, 2000);
-            }
+/* ============ EXPERIENCE TABS ============ */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected','true');
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+  });
+});
 
-            if (downloadBtn) {
-                downloadBtn.addEventListener('click', function(e) {
-                    // Let the toast show, then allow the download to start.
-                    // Prevent default to control timing.
-                    e.preventDefault();
-                    showToast();
+/* ============ THEME TOGGLE ============ */
+const themeBtn = document.getElementById('themeBtn');
+const root     = document.documentElement;
+let dark = root.getAttribute('data-theme') === 'dark';
+function applyTheme(){
+  root.setAttribute('data-theme', dark ? 'dark' : 'light');
+  themeBtn.textContent = dark ? '☀️' : '🌙';
+}
+themeBtn.addEventListener('click', () => { dark = !dark; applyTheme(); });
 
-                    // Create a temporary link to trigger download after short delay
-                    const href = downloadBtn.getAttribute('href');
-                    const filename = downloadBtn.getAttribute('download') || '';
+/* ============ MOBILE MENU ============ */
+const ham = document.getElementById('hamBtn');
+const mob = document.getElementById('mobileMenu');
+let mOpen = false;
+function closeMobile(){ mOpen=false; mob.classList.remove('open'); ham.setAttribute('aria-expanded','false'); }
+ham.addEventListener('click', () => {
+  mOpen = !mOpen;
+  mob.classList.toggle('open', mOpen);
+  ham.setAttribute('aria-expanded', mOpen);
+});
+mob.addEventListener('click', e => { if(e.target === mob) closeMobile(); });
 
-                    setTimeout(() => {
-                        const a = document.createElement('a');
-                        a.href = href;
-                    }, 800);
-                });
-            }
-        })();
+/* ============ NAVBAR SHADOW ON SCROLL ============ */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.style.boxShadow = window.scrollY > 50 ? '0 4px 30px rgba(0,0,0,.3)' : '0 2px 20px rgba(0,0,0,.2)';
+}, {passive:true});
 
-        // Scroll-to-top hand button behavior
-        (function() {
-            const btn = document.getElementById('scroll-hand');
-            if (!btn) return;
+/* ============ SMOOTH NAV ============ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+  });
+});
 
-            const showAfter = 300; // px scrolled before showing
-            let ticking = false;
+/* ============ PARTICLES SYSTEM ============ */
+class Particle {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.vx = (Math.random() - 0.5) * 1;
+    this.vy = (Math.random() - 0.5) * 1;
+    this.size = Math.random() * 3 + 2;
+  }
 
-            function onScroll() {
-                if (ticking) return;
-                ticking = true;
-                window.requestAnimationFrame(() => {
-                    const sc = window.pageYOffset || document.documentElement.scrollTop;
-                    if (sc > showAfter) {
-                        btn.classList.remove('hide');
-                        btn.classList.add('show');
-                    } else {
-                        btn.classList.remove('show');
-                        btn.classList.add('hide');
-                    }
-                    ticking = false;
-                });
-            }
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
 
-            // initial state
-            btn.classList.add('hide');
-            window.addEventListener('scroll', onScroll, { passive: true });
+    if (this.x < 0 || this.x > this.canvas.width) this.vx *= -1;
+    if (this.y < 0 || this.y > this.canvas.height) this.vy *= -1;
+  }
 
-            // smooth scroll to top with easing
-            function smoothScrollToTop(duration = 600) {
-                const start = window.pageYOffset;
-                const startTime = performance.now();
+  draw(ctx) {
+    ctx.shadowColor = 'rgba(100, 255, 218, 0.1)';
+    ctx.shadowBlur = 5;
 
-                function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(100, 255, 218, 0.3)';
+    ctx.fill();
 
-                function step(now) {
-                    const elapsed = now - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const eased = easeOutCubic(progress);
-                    window.scrollTo(0, Math.round(start * (1 - eased)));
-                    if (progress < 1) requestAnimationFrame(step);
-                }
-                requestAnimationFrame(step);
-            }
+    ctx.shadowColor = 'transparent';
+    ctx.shadowBlur = 0;
+  }
+}
 
-            // click interaction: pulse + scroll
-            btn.addEventListener('click', (e) => {
-                // pulse animation
-                btn.animate([
-                    { transform: 'scale(1)' },
-                    { transform: 'scale(0.92)' },
-                    { transform: 'scale(1)' }
-                ], { duration: 320, easing: 'ease-out' });
+const particleCanvas = document.getElementById('particles-canvas');
+const particleCtx = particleCanvas.getContext('2d');
+const particles = [];
+const PARTICLE_COUNT = 80;
+const CONNECTION_DISTANCE = 120;
 
-                // keyboard focus visual release
-                btn.blur();
+function resizeParticleCanvas() {
+  particleCanvas.width = window.innerWidth;
+  particleCanvas.height = window.innerHeight;
+}
 
-                // scroll to top
-                smoothScrollToTop(600);
-            });
+function initParticles() {
+  particles.length = 0;
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push(new Particle(particleCanvas));
+  }
+}
 
-            // keyboard accessibility: Enter/Space triggers click
-            btn.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    btn.click();
-                }
-            });
-        })();
+function connectParticles() {
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      const dx = particles[i].x - particles[j].x;
+      const dy = particles[i].y - particles[j].y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
 
-        /* Interactive CV card behavior: shadow follows mouse and subtle tilt */
-        (function() {
-            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReduced) return;
+      if (distance < CONNECTION_DISTANCE) {
+        particleCtx.beginPath();
+        const opacity = (CONNECTION_DISTANCE - distance) / CONNECTION_DISTANCE * 0.2;
+        particleCtx.strokeStyle = `rgba(100, 255, 218, ${opacity})`;
+        particleCtx.lineWidth = 1;
+        particleCtx.moveTo(particles[i].x, particles[i].y);
+        particleCtx.lineTo(particles[j].x, particles[j].y);
+        particleCtx.stroke();
+      }
+    }
+  }
+}
 
-            const cards = document.querySelectorAll('.interactive-card');
+function animateParticles() {
+  particleCtx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
 
-            cards.forEach(card => {
-                const img = card.querySelector('.interactive-card__img');
-                const shadow = card.querySelector('.interactive-card__shadow');
+  particles.forEach(particle => {
+    particle.update();
+    particle.draw(particleCtx);
+  });
 
-                let bounds = null;
+  connectParticles();
+  requestAnimationFrame(animateParticles);
+}
 
-                function updateBounds() {
-                    bounds = card.getBoundingClientRect();
-                }
+// Initialize particles after loader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    resizeParticleCanvas();
+    initParticles();
+    animateParticles();
+  }, 2100);
+});
 
-                updateBounds();
-                window.addEventListener('resize', updateBounds);
+window.addEventListener('resize', () => {
+  resizeParticleCanvas();
+  initParticles();
+});
+</script>
 
-                function handleMove(e) {
-                    const x = (e.clientX - bounds.left) / bounds.width;
-                    const y = (e.clientY - bounds.top) / bounds.height;
+<style>
+/* ===================== DYNAMIC BUTTON EFFECT ===================== */
+.dynamic-btn {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
 
-                    // tilt values between -1 and 1
-                    const tiltX = (y - 0.5) * 12; // rotateX
-                    const tiltY = (x - 0.5) * -12; // rotateY
+.dynamic-btn .btn-text {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
 
-                    // translate for shadow (opposite direction, subtle)
-                    const shadowOffsetX = (x - 0.5) * -28;
-                    const shadowOffsetY = (y - 0.5) * -18;
+/* Glitch text layers */
+.dynamic-btn .glitch-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
 
-                    card.style.transform = `perspective(900px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-                    if (img) img.style.transform = `translateZ(40px) scale(1.02)`;
+.dynamic-btn .glitch-text:nth-of-type(1) {
+  color: #ff0066;
+  text-shadow: 0 0 10px rgba(255, 0, 102, 0.8);
+}
 
-                    if (shadow) {
-                        shadow.style.transform = `translate(calc(-50% + ${shadowOffsetX}px), calc(-50% + ${shadowOffsetY}px))`;
-                        // slightly grow the shadow when cursor is near center
-                        const distToCenter = Math.hypot(x - 0.5, y - 0.5);
-                        const scale = 1.15 - Math.min(distToCenter, 0.5) * 0.6;
-                        shadow.style.width = `${70 * scale}%`;
-                        shadow.style.height = `${70 * scale}%`;
-                    }
-                }
+.dynamic-btn .glitch-text:nth-of-type(2) {
+  color: #00ffaa;
+  text-shadow: 0 0 10px rgba(0, 255, 170, 0.8);
+}
 
-                function reset() {
-                    card.style.transform = '';
-                    if (img) img.style.transform = '';
-                    if (shadow) {
-                        shadow.style.transform = 'translate(-50%, -50%)';
-                        shadow.style.width = '';
-                        shadow.style.height = '';
-                    }
-                }
+/* Hover states - enhance existing hover effects */
+.hero-cta:hover,
+.contact-email-btn:hover,
+.nav-resume:hover,
+.mob-resume:hover {
+  transform: translateY(-6px) rotateX(8deg) scale(1.02) !important;
+  border-color: rgba(100, 255, 218, 0.9);
+}
 
-                card.addEventListener('mousemove', handleMove);
-                card.addEventListener('mouseenter', updateBounds);
-                card.addEventListener('mouseleave', reset);
+.hero-cta:hover .btn-text,
+.contact-email-btn:hover .btn-text,
+.nav-resume:hover .btn-text,
+.mob-resume:hover .btn-text {
+  opacity: 0;
+}
 
-                // keyboard accessibility: when focused use a subtle lift
-                card.addEventListener('focus', () => {
-                    card.style.transform = 'perspective(900px) translateZ(8px)';
-                    if (img) img.style.transform = 'translateZ(20px) scale(1.01)';
-                    if (shadow) { shadow.style.transform = 'translate(-50%, -42%)'; }
-                });
+.hero-cta:hover .glitch-text,
+.contact-email-btn:hover .glitch-text,
+.nav-resume:hover .glitch-text,
+.mob-resume:hover .glitch-text {
+  opacity: 1;
+}
 
-                card.addEventListener('blur', reset);
-            });
-        })();
-    </script>
-<script src="./assets/js/cursor.js" defer></script>
+.hero-cta:hover .glitch-text:nth-of-type(1),
+.contact-email-btn:hover .glitch-text:nth-of-type(1),
+.nav-resume:hover .glitch-text:nth-of-type(1),
+.mob-resume:hover .glitch-text:nth-of-type(1) {
+  animation: glitch1 0.5s infinite;
+}
+
+.hero-cta:hover .glitch-text:nth-of-type(2),
+.contact-email-btn:hover .glitch-text:nth-of-type(2),
+.nav-resume:hover .glitch-text:nth-of-type(2),
+.mob-resume:hover .glitch-text:nth-of-type(2) {
+  animation: glitch2 0.5s infinite;
+}
+
+/* Glitch animations - the shake effect */
+@keyframes glitch1 {
+  0%, 100% { transform: translate(-50%, -50%); }
+  20% { transform: translate(-52%, -48%); }
+  40% { transform: translate(-48%, -52%); }
+  60% { transform: translate(-52%, -48%); }
+  80% { transform: translate(-48%, -52%); }
+}
+
+@keyframes glitch2 {
+  0%, 100% { transform: translate(-50%, -50%); }
+  25% { transform: translate(-48%, -52%); }
+  50% { transform: translate(-52%, -48%); }
+  75% { transform: translate(-48%, -52%); }
+}
+
+/* Shine effect overlay */
+.hero-cta::before,
+.contact-email-btn::before,
+.nav-resume::before,
+.mob-resume::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%) rotate(45deg);
+  transition: transform 0.6s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-cta:hover::before,
+.contact-email-btn:hover::before,
+.nav-resume:hover::before,
+.mob-resume:hover::before {
+  transform: translateX(100%) rotate(45deg);
+}
+
+.footer-icon:hover::before {
+  transform: translateX(100%) rotate(45deg);
+}
+
+/* ===================== GREEN UNDERLINE EFFECT ===================== */
+.underline-green {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.underline-green::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  background: var(--green);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.underline-green:hover::after {
+  width: 100%;
+  left: 0;
+}
+</style>
 </body>
 </html>
