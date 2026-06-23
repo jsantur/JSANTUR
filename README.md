@@ -100,7 +100,7 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 [![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbzlfRLDxcQeBQ7vybhQxcbqFJHtMRe3KvHrrwKI70XxkPd8DbIrFq5IqLJQwzYL08Wgzw/exec)
 </details>
 
-<details open> 
+<details> 
 	  <summary><h2>▶️ Algunos vídeos en YouTube:</h2></summary>
 <table style="width:100%">
 <tr>
