@@ -49,7 +49,7 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 [![Portafolio](https://img.shields.io/badge/Portafolio-Web-00C853?style=for-the-badge\&logo=googlechrome\&logoColor=white)](https://jsportfolio-theta.vercel.app/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-+51_916_582_265-25D366?style=for-the-badge\&logo=whatsapp\&logoColor=white)](https://wa.me/51916582265?text=Hola%2C%20vi%20tu%20portafolio)
 
-<details> 
+<details open> 
 	  <summary><h2>Explora mi portafolio profesional</h2></summary>
 
 ![https://jsportfolio-theta.vercel.app/](./assets/Images/jsanturpro-portafolio.png)
