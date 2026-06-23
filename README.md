@@ -59,7 +59,8 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 > 
 > Entra en **[jsantur.pro](https://jsportfolio-theta.vercel.app/)** y descubre todo lo que puedo aportar para transformar ideas en soluciones digitales.
 
-# 💼 Algunos proyectos destacados
+<details open> 
+	  <summary><h2>💼 Algunos proyectos destacados</h2></summary>
 
 ## Sistema de Reportes MPT | Central de Monitoreo
 <a href="https://report-notebook-young-stone-9766.fly.dev/login">
@@ -97,7 +98,7 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 </a>
 
 [![Verificar certificado](https://img.shields.io/badge/Verificar%20certificado-50k-blue?style=social&logo=github)](https://script.google.com/macros/s/AKfycbzlfRLDxcQeBQ7vybhQxcbqFJHtMRe3KvHrrwKI70XxkPd8DbIrFq5IqLJQwzYL08Wgzw/exec)
-
+</details>
 
 ## ▶️ Algunos vídeos en YouTube:
 
