@@ -49,7 +49,8 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 [![Portafolio](https://img.shields.io/badge/Portafolio-Web-00C853?style=for-the-badge\&logo=googlechrome\&logoColor=white)](https://jsportfolio-theta.vercel.app/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-+51_916_582_265-25D366?style=for-the-badge\&logo=whatsapp\&logoColor=white)](https://wa.me/51916582265?text=Hola%2C%20vi%20tu%20portafolio)
 
-# Explora mi portafolio profesional
+<details> 
+	  <summary><h2>Explora mi portafolio profesional</h2></summary>
 
 ![https://jsportfolio-theta.vercel.app/](./assets/Images/jsanturpro-portafolio.png)
 
@@ -58,6 +59,7 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 > **¿Quieres conocer más sobre mí?** Aquí encontrarás mi currículum, proyectos y trabajos realizados, certificaciones, experiencia profesional y las tecnologías con las que trabajo. También podrás descubrir aplicaciones desarrolladas, sitios web, colaboraciones, servicios y mucho más.
 > 
 > Entra en **[jsantur.pro](https://jsportfolio-theta.vercel.app/)** y descubre todo lo que puedo aportar para transformar ideas en soluciones digitales.
+</details>
 
 <details open> 
 	  <summary><h2>💼 Algunos proyectos destacados</h2></summary>
