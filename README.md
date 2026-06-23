@@ -157,7 +157,8 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 </table>
 </details>
 
-## 📫 Contacto y apoyo:
+<details open> 
+  <summary><h2>📫 Contacto y apoyo:</h2></summary>
 
 ¿Proyecto en mente o ganas de colaborar? Contáctame por redes o correo y lo desarrollamos juntos.
  
@@ -169,4 +170,5 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 <div align="center">
 	<i>“Cuanto más grande es la prueba, más glorioso es el triunfo.” - Thomas Paine</i>
 </div>
+</details>
  
