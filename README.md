@@ -65,7 +65,7 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 	  <summary><h2>💼 Algunos proyectos destacados</h2></summary>
 
 ## Sistema de Reportes MPT | Central de Monitoreo
-<a href="https://report-notebook-young-stone-9766.fly.dev/login">
+<a href="https://report-notebook-jsantur.fly.dev/login">
   <img src="./assets/Images/jsantur-report_notebook.webp" style="height: 60%; width: 60%;"/>
 </a>
 
