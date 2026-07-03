@@ -67,7 +67,7 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 # 🧹 JSANTUR Toolbox ✨
 
 <a href="https://github.com/jsantur/jsantur-toolbox">
-  <img src="./assets/Images/jsantur-toolbox.webp" alt="JSANTUR Toolbox" style="width: 70%;"/>
+  <img src="./assets/Images/jsanturToolbox.png" alt="JSANTUR Toolbox" style="width: 70%;"/>
 </a>
 
 <br>
