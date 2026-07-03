@@ -64,6 +64,19 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 <details open> 
 	  <summary><h2>💼 Algunos proyectos destacados</h2></summary>
 
+# 🧹 JSANTUR Toolbox ✨
+
+<a href="https://github.com/jsantur/jsantur-toolbox">
+  <img src="./assets/Images/jsantur-toolbox.webp" alt="JSANTUR Toolbox" style="width: 70%;"/>
+</a>
+
+<br>
+
+[![Repositorio](https://img.shields.io/badge/Repositorio-GitHub-black?style=for-the-badge&logo=github)](https://github.com/jsantur/jsantur-toolbox)
+[![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=for-the-badge&logo=powershell)](https://github.com/jsantur/jsantur-toolbox)
+[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/jsantur/jsantur-toolbox)
+[![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-success?style=for-the-badge)](https://github.com/jsantur/jsantur-toolbox)	  
+
 ## Sistema de Reportes MPT | Central de Monitoreo
 <a href="https://report-notebook-jsantur.fly.dev/login">
   <img src="./assets/Images/jsantur-report_notebook.webp" style="height: 60%; width: 60%;"/>
