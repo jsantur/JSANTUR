@@ -294,7 +294,6 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 <pre>
       "Cuanto más grande es la prueba,
          más glorioso es el triunfo."
-
             ████████╗██╗  ██╗ ██████╗ ███╗   ███╗ █████╗ ███████╗
             ╚══██╔══╝██║  ██║██╔═══██╗████╗ ████║██╔══██╗██╔════╝
                ██║   ███████║██║   ██║██╔████╔██║███████║███████╗
