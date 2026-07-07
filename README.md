@@ -290,11 +290,6 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 </br>
 
 <div align="center">
-	<i>“Cuanto más grande es la prueba, más glorioso es el triunfo.” - Thomas Paine</i>
-</div>
-</details>
-
-<div align="center">
 
 <pre>
       "Cuanto más grande es la prueba,
@@ -316,5 +311,5 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 </pre>
 
 </div>
-
+</details>
  
