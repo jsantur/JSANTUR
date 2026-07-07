@@ -291,14 +291,15 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 
 <div align="center">
 	<i>“Cuanto más grande es la prueba, más glorioso es el triunfo.” - Thomas Paine</i>
-      _ ____    _    _   _ _____ _   _ ____  
-     | / ___|  / \  | \ | |_   _| | | |  _ \ 
-  _  | \___ \ / _ \ |  \| | | | | | | | |_) |
- | |_| |___) / ___ \| |\  | | | | |_| |  _ < 
-  \___/|____/_/   \_\_| \_| |_|  \___/|_| \_\
-
-                    J S A N T U R	
 </div>
 </details>
+
+<div align="center">
+	<i>	_   __  _  _
+	|  /  \ |  |            |
+	|  \__  |__|      __  __|__ __  | ~
+	|     \ |  | | | /  \   |  /__\ |/
+ \_ /  \_ / |  | \_/ |  |   \_ \__  |</i>
+</div>
 
  
