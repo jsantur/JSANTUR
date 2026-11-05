@@ -90,7 +90,6 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 [![HTML5 y CSS3](https://img.shields.io/badge/HTML5-CSS3-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org)
 [![JavaScript](https://img.shields.io/badge/JAVASCRIPT-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org)
 [![Responsive](https://img.shields.io/badge/RESPONSIVE-MOBILE-8B5CF6?style=for-the-badge)](https://github.com/jsantur)
-[![Developer](https://img.shields.io/badge/DEVELOPER-JSANTUR-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jsantur)
 
 ## Sistema de Reportes MPT | Central de Monitoreo
 <a href="https://report-notebook-jsantur.fly.dev/login">
