@@ -81,7 +81,7 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 
 <p align="center">
   <a href="https://script.google.com/macros/s/AKfycbwUzlFc2fmpf_smxa_ceQGIBeMKmNYC4YU25gBP2LdW8w42AVRiESq4ohKhVDAdWFtNuA/exec">
-    <img src="./assets/Images/bannerJSArchivo.png" alt="JSanturArchivo_MPT - Sistema de Consulta Documental" width="100%">
+    <img src="./assets/Images/bannerJSArchivo.png" alt="JSanturArchivo_MPT - Sistema de Consulta Documental" style="width: 100%; border-radius: 8px;"/>
   </a>
 </p>
 
@@ -92,17 +92,17 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 
 <p align="center">
   <a href="https://script.google.com/macros/s/AKfycbwUzlFc2fmpf_smxa_ceQGIBeMKmNYC4YU25gBP2LdW8w42AVRiESq4ohKhVDAdWFtNuA/exec">
-    <img src="https://img.shields.io/badge/ABRIR%20APLICACIÓN-Consulta%20Documental-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Abrir aplicación">
+    <img src="https://img.shields.io/badge/ABRIR%20APLICACI%C3%93N-CONSULTA%20DOCUMENTAL-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Abrir aplicación">
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Google-Apps%20Script-orange?style=for-the-badge&logo=googleappsscript&logoColor=white" alt="Google Apps Script">
-  <img src="https://img.shields.io/badge/Google-Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white" alt="Google Sheets">
+  <img src="https://img.shields.io/badge/GOOGLE-APPS%20SCRIPT-orange?style=for-the-badge&logo=googleappsscript&logoColor=white" alt="Google Apps Script">
+  <img src="https://img.shields.io/badge/GOOGLE-SHEETS-34A853?style=for-the-badge&logo=googlesheets&logoColor=white" alt="Google Sheets">
   <img src="https://img.shields.io/badge/HTML5-CSS3-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 y CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Responsive-Mobile-8B5CF6?style=for-the-badge" alt="Responsive">
-  <img src="https://img.shields.io/badge/Developer-JSANTUR-111827?style=for-the-badge&logo=github&logoColor=white" alt="JSANTUR">
+  <img src="https://img.shields.io/badge/JAVASCRIPT-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/RESPONSIVE-MOBILE-8B5CF6?style=for-the-badge" alt="Responsive">
+  <img src="https://img.shields.io/badge/DEVELOPER-JSANTUR-111827?style=for-the-badge&logo=github&logoColor=white" alt="JSANTUR">
 </p>
 
 
