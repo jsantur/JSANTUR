@@ -83,7 +83,6 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
   <img src="./assets/Images/bannerJSArchivo.png" alt="JSanturArchivo_MPT - Sistema de Consulta Documental" style="width: 60%; border-radius: 8px;"/>
 </a>
 
-[![Google Apps Script](https://img.shields.io/badge/GOOGLE-APPS%20SCRIPT-orange?style=for-the-badge&logo=googleappsscript&logoColor=white)](https://script.google.com)
 [![Google Sheets](https://img.shields.io/badge/GOOGLE-SHEETS-34A853?style=for-the-badge&logo=googlesheets&logoColor=white)](https://sheets.google.com)
 [![HTML5 y CSS3](https://img.shields.io/badge/HTML5-CSS3-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org)
 [![JavaScript](https://img.shields.io/badge/JAVASCRIPT-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org)
