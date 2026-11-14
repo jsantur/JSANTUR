@@ -308,7 +308,7 @@ Me encuentro en constante aprendizaje y evolución profesional, explorando nueva
 </br>
 [![WhatsApp](https://img.shields.io/badge/WHATSAPP-JSANTUR%20(RESPUESTA%20R%C3%81PIDA)%20GRACIAS!-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/51977201449?text=Hola%20JSANTUR%20vengo%20de%20GITHUB)
 </br>
-
+[![BuyMeACoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-apoya_mi_trabajo-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white&labelColor=101010)](https://ko-fi.com/jsantur) 
 <div align="center">
 
 <pre>
